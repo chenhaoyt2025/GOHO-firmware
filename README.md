@@ -1,57 +1,13 @@
 # GOHO-firmware
 
-Public firmware catalog for GOHO University.
+Versioned firmware artifacts for GOHO products. This repository contains release images and metadata only; it does not contain the GOHO source tree.
 
-## Where to add files
+## Current artifacts
 
-- Fixed bootloaders: `bootloaders/`
-- Application and combo firmware: `firmware/`
-- Catalog metadata: `firmware-manifest.json`
+- `bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST.bin` / `.hex`
+- `beads/GOHO-BEADS-v0.2.1-TEST.bin` / `.hex` (current BEADS test image)
+- `beads/GOHO-BEADS-v0.2.0-TEST.bin` / `.hex` (previous image)
 
-The website reads `firmware-manifest.json` and displays the friendly `name` and `version`. The `file` field can be a repository-relative path or a public raw download URL. Repository-relative paths are preferred; the web page resolves them automatically.
+All images are `TEST`, not `STABLE`. On v0.2.1, USB MIDI enumeration through macOS CoreMIDI, a CDC echo, USB Audio device recognition, and the virtual-disk bootloader update path were verified. WS2812B startup/knob lighting and continuous USB Audio streaming remain unverified.
 
-## Firmware entry rules
-
-- `type: "bootloader"`: fixed bootloader image.
-- `type: "application"`: application-only image, normally paired with a bootloader.
-- `type: "combo"`: image containing bootloader plus application; do not add a bootloader separately.
-- `format: "bin"` or `format: "hex"`.
-
-For application-only BIN files, fill in `flashAddress` with the application start address. HEX files normally carry their own addresses. Optional `vendorId`, `productId`, `nameContains`, and `device` fields let the page recommend a matching firmware after USB authorization.
-
-## Catalog example
-
-```json
-{
-  "schema": 1,
-  "bootloaders": [
-    {
-      "id": "goho-stm32-default",
-      "name": "GOHO Fixed Bootloader",
-      "version": "1.0.0",
-      "file": "bootloaders/goho-bootloader.hex",
-      "format": "hex",
-      "device": "GOHO",
-      "default": true
-    }
-  ],
-  "firmwares": [
-    {
-      "id": "eurorack-1.0.0",
-      "name": "Eurorack",
-      "version": "1.0.0",
-      "file": "firmware/eurorack-1.0.0.hex",
-      "format": "hex",
-      "type": "application",
-      "device": "Eurorack",
-      "nameContains": "Eurorack",
-      "vendorId": "0x0483",
-      "productId": "0x4011"
-    }
-  ]
-}
-```
-
-If another public repository hosts the image, put its public raw file URL in the `file` field. Do not use a GitHub HTML `blob` page URL.
-
-Do not store GitHub tokens or private credentials in this repository.
+See `VERSION_HISTORY.md`, `SHA256SUMS.txt`, and `firmware-manifest.json` for exact sizes, build provenance, addresses, and SHA-256 values.

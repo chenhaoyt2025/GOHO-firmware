@@ -1,5 +1,89 @@
 {
   "schema": 1,
-  "bootloaders": [],
-  "firmwares": []
+  "generatedAt": "2026-11-12",
+  "bootloaders": [
+    {
+      "id": "goho-bootloader-bin",
+      "name": "GOHO Bootloader",
+      "version": "1.0.0",
+      "file": "bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST.bin",
+      "format": "bin",
+      "type": "bootloader",
+      "status": "TEST",
+      "sizeBytes": 67516,
+      "sha256": "a0a8792fa3179642be39dd89fb1def5a42e9db0cee7f1f2bc3cb74f005e71f05",
+      "buildDate": "2026-11-12"
+    },
+    {
+      "id": "goho-bootloader-hex",
+      "name": "GOHO Bootloader",
+      "version": "1.0.0",
+      "file": "bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST.hex",
+      "format": "hex",
+      "type": "bootloader",
+      "status": "TEST",
+      "sizeBytes": 189867,
+      "sha256": "4b09f8bc650e62a89adc3f3c6bd8a4b04c69cf42c250207128f901a48cb7824a",
+      "buildDate": "2026-11-12"
+    }
+  ],
+  "firmwares": [
+    {
+      "id": "goho-beads-bin",
+      "name": "GOHO BEADS",
+      "version": "0.2.0",
+      "file": "beads/GOHO-BEADS-v0.2.0-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 321512,
+      "sha256": "4a0e6e515e33e79c3584ac638a4b45cf5e38726f13851ab06adef724ced11669",
+      "buildDate": "2026-11-12",
+      "flashAddress": "0x08020000"
+    },
+    {
+      "id": "goho-beads-hex",
+      "name": "GOHO BEADS",
+      "version": "0.2.0",
+      "file": "beads/GOHO-BEADS-v0.2.0-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 904285,
+      "sha256": "2b5b043fcf7df782f6bbb6ade99934004b445d2d527aa73d74e98ed33537631f",
+      "buildDate": "2026-11-12"
+    },
+    {
+      "id": "goho-beads-v0.2.1-test-bin",
+      "name": "GOHO BEADS",
+      "version": "0.2.1",
+      "file": "beads/GOHO-BEADS-v0.2.1-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 322808,
+      "sha256": "999a38a212bbd6cb0dc3f7888671fdd8e7388b599397faa1853f93ab5ad00cd5",
+      "buildDate": "2026-11-12",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 (workspace had pre-existing changes)",
+      "buildDirectory": "build/next007-final-beads"
+    },
+    {
+      "id": "goho-beads-v0.2.1-test-hex",
+      "name": "GOHO BEADS",
+      "version": "0.2.1",
+      "file": "beads/GOHO-BEADS-v0.2.1-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 907930,
+      "sha256": "23fb2ae988355112240ffd115da7c25ecfba71d6aaf8ab91539b68eef523da48",
+      "buildDate": "2026-11-12",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 (workspace had pre-existing changes)",
+      "buildDirectory": "build/next007-final-beads"
+    }
+  ]
 }
