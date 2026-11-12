@@ -70,3 +70,12 @@ The Plaits test image has not been installed or run on hardware. Host DSP/contro
 | Product | Version | Status | Artifacts | Notes |
 |---|---:|---|---|---|
 | GOHO PLAITS | v0.1.1 | TEST | `plaits/GOHO-PLAITS-v0.1.1-TEST.bin`, `.hex` | Recovery build after v0.1.0 was reported nonfunctional following virtual-disk installation. Defaults to the continuous Virtual Analog engine; uses Media/Assign to select models and Board gate inputs for triggers; restores Plaits Plus reverb, CDC monitoring, and USB Audio routing. Host/target checks pass; GOHO-board confirmation is pending. |
+
+
+## 2026-11-13 — GOHO-NEXT-009 Plaits WS2812B integration
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO PLAITS | v0.1.2 | TEST | `plaits/GOHO-PLAITS-v0.1.2-TEST.bin`, `.hex` | Adds the Plaits startup chase and knob-value display in the GOHO module application; reuses the existing GOHO H743 transmitter and encoder. Hardware LED confirmation is pending. |
+
+Built for STM32H743 with GNU Arm Embedded Toolchain 10.3.1 at application address `0x08020000`. Source revision: `0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 Plaits LED changes`. Build directory: `build/next009-plaits-led-20261113`. BIN: 302416 bytes, SHA-256 `a3617bbc6b4068932b5fa2dc861573c98971063f00548aa3b59e65ccd1d100ff`. HEX: 850571 bytes, SHA-256 `fc7cd2544af4e1fe09f43cd5f793078da0cbcdc3cc9ef37ef2b2eae829922346`. The image remains `TEST`; clean build success does not confirm LED behavior on hardware.

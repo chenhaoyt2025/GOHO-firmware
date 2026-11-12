@@ -422,6 +422,40 @@
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 recovery changes",
       "buildDirectory": "build/next009-recovery-plaits",
       "notes": "Intel HEX generated from the same GOHO PLAITS ELF as the BIN; hardware confirmation is pending."
+    },
+    {
+      "id": "goho-plaits-v0.1.2-test-bin",
+      "name": "GOHO PLAITS",
+      "version": "0.1.2",
+      "file": "plaits/GOHO-PLAITS-v0.1.2-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 302416,
+      "sha256": "a3617bbc6b4068932b5fa2dc861573c98971063f00548aa3b59e65ccd1d100ff",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 Plaits LED changes",
+      "buildDirectory": "build/next009-plaits-led-20261113",
+      "notes": "Plaits application WS2812B startup chase and panel-knob display; GOHO target clean build passed. This image has not yet been installed for hardware LED confirmation."
+    },
+    {
+      "id": "goho-plaits-v0.1.2-test-hex",
+      "name": "GOHO PLAITS",
+      "version": "0.1.2",
+      "file": "plaits/GOHO-PLAITS-v0.1.2-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 850571,
+      "sha256": "fc7cd2544af4e1fe09f43cd5f793078da0cbcdc3cc9ef37ef2b2eae829922346",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 Plaits LED changes",
+      "buildDirectory": "build/next009-plaits-led-20261113",
+      "notes": "Intel HEX generated from the same GOHO PLAITS ELF as the BIN; hardware LED confirmation is pending."
     }
   ]
 }
