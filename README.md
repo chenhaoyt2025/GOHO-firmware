@@ -4,11 +4,15 @@ Versioned firmware artifacts for GOHO products. This repository contains release
 
 ## Current artifacts
 
-- `bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST.bin` / `.hex`
-- `beads/GOHO-BEADS-v0.2.2-TEST.bin` / `.hex` (current BEADS test image)
-- `beads/GOHO-BEADS-v0.2.1-TEST.bin` / `.hex` (previous image)
-- `beads/GOHO-BEADS-v0.2.0-TEST.bin` / `.hex` (older image)
+| Product | Current catalog image | Flash address | Status |
+|---|---|---:|---|
+| GOHO Bootloader | `bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
+| GOHO BEADS | `beads/GOHO-BEADS-v0.2.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO PLAITS PLUS | `plaits/GOHO-PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO RINGS PLUS | `rings/GOHO-RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO ELEMENTS PLUS | `elements/GOHO-ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO PEAKS PLUS | `peaks/GOHO-PEAKS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 
-All images are `TEST`, not `STABLE`. On v0.2.1, USB MIDI enumeration through macOS CoreMIDI, a CDC echo, USB Audio device recognition, and the virtual-disk bootloader update path were verified. v0.2.2 adds the 4051 DMA interrupt and RGB mapping fix; its hardware behavior still requires confirmation.
+The four X Plus entries are archived historical application builds from the `eurorack-master_HOHO/build/` output directories. Their catalog versions were assigned for the first archive entry because the original builds did not include semantic version metadata. Their source checkout was dirty, so rebuilding identical images from the recorded revision is not guaranteed. They use the `0x08020000` application address, but compatibility with the current GOHO Bootloader and current board behavior was not revalidated.
 
-See `VERSION_HISTORY.md`, `SHA256SUMS.txt`, and `firmware-manifest.json` for exact sizes, build provenance, addresses, and SHA-256 values.
+All images remain `TEST`; archive inclusion does not imply current hardware validation. The BEADS v0.2.3 image contains the reverb extension and still needs listening validation. SHA-256, exact sizes, source revisions and build directories are recorded in `VERSION_HISTORY.md`, `SHA256SUMS.txt`, and `firmware-manifest.json`.

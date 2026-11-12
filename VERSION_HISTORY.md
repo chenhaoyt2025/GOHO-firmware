@@ -27,3 +27,18 @@ v0.2.1 remains `TEST`: MIDI event send/receive and physical WS2812B behavior wer
 | GOHO BEADS | v0.2.2 | TEST | `beads/GOHO-BEADS-v0.2.2-TEST.bin`, `.hex` | Adds the missing ADC3 DMA Stream4 IRQ dispatch required to publish accepted 4051 samples, and maps the seventh muxed Pitch Amount pot into RGB knob feedback. H743 clean target build passed. Hardware confirmation of mux movement, reverb response, WS2812 output, and USB regressions is pending. |
 
 v0.2.2 remains `TEST` until those hardware checks pass.
+
+
+## 2026-11-12 — GOHO-NEXT-007 reverb extension and X Plus archive
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO BEADS | v0.2.3 | TEST | `beads/GOHO-BEADS-v0.2.3-TEST.bin`, `.hex` | Reverb control extension: original maximum at 80%, extended decay/density/diffusion above 80%, feedback damping and output safety. H743 build artifacts were produced; this image has not yet received user listening validation. |
+| GOHO PLAITS PLUS | v0.1.0 | TEST | `plaits/GOHO-PLAITS-PLUS-v0.1.0-TEST.bin`, `.hex` | First archive catalog version; sourced from `build/plaits_plus`. |
+| GOHO RINGS PLUS | v0.1.0 | TEST | `rings/GOHO-RINGS-PLUS-v0.1.0-TEST.bin`, `.hex` | First archive catalog version; sourced from `build/rings_plus`. |
+| GOHO ELEMENTS PLUS | v0.1.0 | TEST | `elements/GOHO-ELEMENTS-PLUS-v0.1.0-TEST.bin`, `.hex` | First archive catalog version; sourced from `build/elements_plus`. |
+| GOHO PEAKS PLUS | v0.1.0 | TEST | `peaks/GOHO-PEAKS-PLUS-v0.1.0-TEST.bin`, `.hex` | First archive catalog version; sourced from `build/peaks_plus`. |
+
+The four X Plus catalog versions are archive labels, not upstream version claims. The source checkout was at `42a740fc7c019aacd1307e43ba50112cee5ab5e1` with local modifications, including product makefiles; reproducibility from the clean commit is unverified. The ELF program headers place each application at `0x08020000`. These historical application images were not repackaged with any bootloader, and compatibility with the current GOHO Bootloader was not verified.
+
+The GOHO Bootloader v1.0.0-TEST artifact is retained unchanged from its existing archive entry; the rebuilt image SHA-256 matches the archived artifact.
