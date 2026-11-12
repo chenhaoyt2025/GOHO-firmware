@@ -336,7 +336,7 @@
       "buildTarget": "STM32H743",
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 uncommitted changes",
       "buildDirectory": "build/next009-plaits",
-      "notes": "First GOHO PLAITS port build. Full upstream Plaits DSP registry, shared GOHO H743 audio runtime, panel/CV mapping, and USB MIDI Note receive. Hardware operation remains unverified."
+      "notes": "User reported this image did not work after installation through the goho bootloader virtual disk and reboot. Retained for history; use the v0.1.1-TEST recovery candidate for further testing."
     },
     {
       "id": "goho-plaits-v0.1.0-test-hex",
@@ -353,7 +353,7 @@
       "buildTarget": "STM32H743",
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 uncommitted changes",
       "buildDirectory": "build/next009-plaits",
-      "notes": "Intel HEX generated from the same GOHO PLAITS ELF as the BIN."
+      "notes": "User reported this image did not work after installation through the goho bootloader virtual disk and reboot. Retained for history; use the v0.1.1-TEST recovery candidate for further testing."
     },
     {
       "id": "goho-beads-v0.2.5-test-bin",
@@ -388,6 +388,40 @@
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 uncommitted changes",
       "buildDirectory": "build/next009-beads",
       "notes": "Intel HEX generated from the same GOHO BEADS ELF as the BIN."
+    },
+    {
+      "id": "goho-plaits-v0.1.1-test-bin",
+      "name": "GOHO PLAITS",
+      "version": "0.1.1",
+      "file": "plaits/GOHO-PLAITS-v0.1.1-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 295488,
+      "sha256": "3fc0e546a365c506d4970db5e49ee7cc23f7e6956d182031ab10418ffb0b45c0",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 recovery changes",
+      "buildDirectory": "build/next009-recovery-plaits",
+      "notes": "Recovery build after user reported GOHO-PLAITS-v0.1.0-TEST did not work after goho bootloader virtual-disk installation. Corrects model selection and Board gate routing; restores Plaits Plus reverb, CDC monitor, and USB Audio data callbacks. Host and target build pass; hardware confirmation is pending."
+    },
+    {
+      "id": "goho-plaits-v0.1.1-test-hex",
+      "name": "GOHO PLAITS",
+      "version": "0.1.1",
+      "file": "plaits/GOHO-PLAITS-v0.1.1-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 831086,
+      "sha256": "54841bcd17d27de617e984aeb2896a949010998f1b3b7f17dbea7c2601942062",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 recovery changes",
+      "buildDirectory": "build/next009-recovery-plaits",
+      "notes": "Intel HEX generated from the same GOHO PLAITS ELF as the BIN; hardware confirmation is pending."
     }
   ]
 }

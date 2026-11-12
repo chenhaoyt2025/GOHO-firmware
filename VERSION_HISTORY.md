@@ -63,3 +63,10 @@ The GOHO Bootloader is unchanged and was not rebuilt or re-archived in NEXT-008.
 Both application vectors are linked at `0x08020000`. GNU Arm Embedded Toolchain 10.3.1 was used. GOHO source HEAD was `0f323c9dacd01715c238b6f3525ba16931707581` plus the pre-existing dirty workspace and NEXT-009 uncommitted changes. Build output directories are `build/next009-plaits` and `build/next009-beads`. Hashes and byte counts are in `firmware-manifest.json` and `SHA256SUMS.txt`.
 
 The Plaits test image has not been installed or run on hardware. Host DSP/control tests and the target compile/link passed; this is not a hardware audio, MIDI enumeration, CV calibration, USB CDC, or USB Audio pass. Both images remain `TEST`.
+
+
+## 2026-11-13 — GOHO-NEXT-009 Plaits recovery build
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO PLAITS | v0.1.1 | TEST | `plaits/GOHO-PLAITS-v0.1.1-TEST.bin`, `.hex` | Recovery build after v0.1.0 was reported nonfunctional following virtual-disk installation. Defaults to the continuous Virtual Analog engine; uses Media/Assign to select models and Board gate inputs for triggers; restores Plaits Plus reverb, CDC monitoring, and USB Audio routing. Host/target checks pass; GOHO-board confirmation is pending. |
