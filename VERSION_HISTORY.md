@@ -79,3 +79,12 @@ The Plaits test image has not been installed or run on hardware. Host DSP/contro
 | GOHO PLAITS | v0.1.2 | TEST | `plaits/GOHO-PLAITS-v0.1.2-TEST.bin`, `.hex` | Adds the Plaits startup chase and knob-value display in the GOHO module application; reuses the existing GOHO H743 transmitter and encoder. Hardware LED confirmation is pending. |
 
 Built for STM32H743 with GNU Arm Embedded Toolchain 10.3.1 at application address `0x08020000`. Source revision: `0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 Plaits LED changes`. Build directory: `build/next009-plaits-led-20261113`. BIN: 302416 bytes, SHA-256 `a3617bbc6b4068932b5fa2dc861573c98971063f00548aa3b59e65ccd1d100ff`. HEX: 850571 bytes, SHA-256 `fc7cd2544af4e1fe09f43cd5f793078da0cbcdc3cc9ef37ef2b2eae829922346`. The image remains `TEST`; clean build success does not confirm LED behavior on hardware.
+
+
+## 2026-11-13 — GOHO-NEXT-009 Plaits CDC and board LED correction
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO PLAITS | v0.1.3 | TEST | `plaits/GOHO-PLAITS-v0.1.3-TEST.bin`, `.hex` | Shared GOHO H743 WS2812 display for five direct pots plus seven 4051 channels; CDC pages with `0=engines` and `9=all`; USB product/configuration/interface descriptors use `goho modular synth`.
+
+Built from GOHO source HEAD `0f323c9dacd01715c238b6f3525ba16931707581` plus the existing dirty workspace and this NEXT-009 correction. Build directory: `/Users/hoho_mini/Documents/GOHO-eurorack/build/next009-plaits-repair-20261113`; target: STM32H743, application address `0x08020000`, GNU Arm Embedded Toolchain 10.3.1. BIN: 304016 bytes, SHA-256 `9d52e12b8f218645761c3ee53ce8d3673f1225d2c681aa0d2ffb6456881f66e2`. HEX: 855071 bytes, SHA-256 `d02450fdeefbbc50de19f66f09d452f5794d280fbe85ddc2e2e96ef18c7e7a1c`. Hardware LED, CDC, and host USB-name confirmation remain pending; status is TEST.

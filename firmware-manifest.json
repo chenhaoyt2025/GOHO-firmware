@@ -456,6 +456,40 @@
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 Plaits LED changes",
       "buildDirectory": "build/next009-plaits-led-20261113",
       "notes": "Intel HEX generated from the same GOHO PLAITS ELF as the BIN; hardware LED confirmation is pending."
+    },
+    {
+      "id": "goho-plaits-v0.1.3-test-bin",
+      "name": "GOHO PLAITS",
+      "version": "0.1.3",
+      "file": "plaits/GOHO-PLAITS-v0.1.3-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 304016,
+      "sha256": "9d52e12b8f218645761c3ee53ce8d3673f1225d2c681aa0d2ffb6456881f66e2",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and NEXT-009 CDC/WS2812/USB descriptor changes",
+      "buildDirectory": "/Users/hoho_mini/Documents/GOHO-eurorack/build/next009-plaits-repair-20261113",
+      "notes": "Uses shared GOHO H743 WS2812 panel display for all 12 controls; restores CDC pages with 0=engines and 9=all; product/config/interface strings are goho modular synth. Hardware confirmation is pending."
+    },
+    {
+      "id": "goho-plaits-v0.1.3-test-hex",
+      "name": "GOHO PLAITS",
+      "version": "0.1.3",
+      "file": "plaits/GOHO-PLAITS-v0.1.3-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 855071,
+      "sha256": "d02450fdeefbbc50de19f66f09d452f5794d280fbe85ddc2e2e96ef18c7e7a1c",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and NEXT-009 CDC/WS2812/USB descriptor changes",
+      "buildDirectory": "/Users/hoho_mini/Documents/GOHO-eurorack/build/next009-plaits-repair-20261113",
+      "notes": "Intel HEX generated from the same GOHO PLAITS ELF as the BIN; hardware confirmation is pending."
     }
   ]
 }
