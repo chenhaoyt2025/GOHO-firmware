@@ -19,7 +19,7 @@ The website reads `firmware-manifest.json` and displays the friendly `name` and 
 - `type: "combo"`: image containing bootloader plus application; do not add a bootloader separately.
 - `format: "bin"` or `format: "hex"`.
 
-For application-only BIN files, fill in `flashAddress` with the application start address. HEX files normally carry their own addresses.
+For application-only BIN files, fill in `flashAddress` with the application start address. HEX files normally carry their own addresses. Optional `vendorId`, `productId`, `nameContains`, and `device` fields let the page recommend a matching firmware after USB authorization.
 
 ## Catalog example
 
@@ -46,6 +46,7 @@ For application-only BIN files, fill in `flashAddress` with the application star
       "format": "hex",
       "type": "application",
       "device": "Eurorack",
+      "nameContains": "Eurorack",
       "vendorId": "0x0483",
       "productId": "0x4011"
     }
