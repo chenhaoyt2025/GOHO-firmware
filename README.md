@@ -10,7 +10,7 @@ GitHub repository names cannot contain spaces, so the repository uses the URL-sa
 - Application and combo firmware: `firmware/`
 - Catalog metadata: `firmware-manifest.json`
 
-The website reads `firmware-manifest.json` and displays the friendly `name` and `version`. The `file` field is a repository-relative path; do not paste long raw GitHub URLs.
+The website reads `firmware-manifest.json` and displays the friendly `name` and `version`. The `file` field can be a repository-relative path or a public raw download URL. Repository-relative paths are preferred; the web page resolves them automatically.
 
 ## Firmware entry rules
 
@@ -52,5 +52,7 @@ For application-only BIN files, fill in `flashAddress` with the application star
   ]
 }
 ```
+
+If another public repository hosts the image, put its public raw file URL in the `file` field. Do not use a GitHub HTML `blob` page URL.
 
 Do not store GitHub tokens or private credentials in this repository.
