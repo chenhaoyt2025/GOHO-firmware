@@ -19,3 +19,11 @@ Hashes and sizes are recorded in `SHA256SUMS.txt` and `firmware-manifest.json`.
 | GOHO BEADS | v0.2.1 | TEST | `beads/GOHO-BEADS-v0.2.1-TEST.bin`, `.hex` | Adds a GOHO-owned USB composite descriptor repair for MIDIStreaming/AIC association; retains WS2812 initialization/clock/display fixes. Clean target build passed. On this exact image, macOS CoreMIDI source/destination enumeration, CDC echo, USB Audio device recognition, and virtual-disk bootloader update passed. WS2812B behavior and continuous USB Audio streaming remain unverified. |
 
 v0.2.1 remains `TEST`: MIDI event send/receive and physical WS2812B behavior were not tested.
+
+## 2026-11-12 — GOHO-NEXT-007 4051 input interrupt fix
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO BEADS | v0.2.2 | TEST | `beads/GOHO-BEADS-v0.2.2-TEST.bin`, `.hex` | Adds the missing ADC3 DMA Stream4 IRQ dispatch required to publish accepted 4051 samples, and maps the seventh muxed Pitch Amount pot into RGB knob feedback. H743 clean target build passed. Hardware confirmation of mux movement, reverb response, WS2812 output, and USB regressions is pending. |
+
+v0.2.2 remains `TEST` until those hardware checks pass.

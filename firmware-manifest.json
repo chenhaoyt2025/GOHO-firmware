@@ -84,6 +84,38 @@
       "buildTarget": "STM32H743",
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 (workspace had pre-existing changes)",
       "buildDirectory": "build/next007-final-beads"
+    },
+    {
+      "id": "goho-beads-v0.2.2-test-bin",
+      "name": "GOHO BEADS",
+      "version": "0.2.2",
+      "file": "beads/GOHO-BEADS-v0.2.2-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 322640,
+      "sha256": "e4d19e74c9cfd0ae3672a20b2d2b5b8420b17cc2ffb7858f3e64dffb2651bd31",
+      "buildDate": "2026-11-12",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 (workspace changes; NEXT-007 input fix)",
+      "buildDirectory": "build/next007-inputfix-beads"
+    },
+    {
+      "id": "goho-beads-v0.2.2-test-hex",
+      "name": "GOHO BEADS",
+      "version": "0.2.2",
+      "file": "beads/GOHO-BEADS-v0.2.2-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 907451,
+      "sha256": "e9d6239635df0a3331698a006cd3f99f8a81e1480242e21d670c25020f338563",
+      "buildDate": "2026-11-12",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 (workspace changes; NEXT-007 input fix)",
+      "buildDirectory": "build/next007-inputfix-beads"
     }
   ]
 }
