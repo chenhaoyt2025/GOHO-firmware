@@ -1,8 +1,6 @@
-# GO HOME Firmware Library
+# GOHO-firmware
 
 Public firmware catalog for GOHO University.
-
-GitHub repository names cannot contain spaces, so the repository uses the name `GOHO-firmware`.
 
 ## Where to add files
 
