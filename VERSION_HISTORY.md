@@ -42,3 +42,13 @@ v0.2.2 remains `TEST` until those hardware checks pass.
 The four X Plus catalog versions are archive labels, not upstream version claims. The source checkout was at `42a740fc7c019aacd1307e43ba50112cee5ab5e1` with local modifications, including product makefiles; reproducibility from the clean commit is unverified. The ELF program headers place each application at `0x08020000`. These historical application images were not repackaged with any bootloader, and compatibility with the current GOHO Bootloader was not verified.
 
 The GOHO Bootloader v1.0.0-TEST artifact is retained unchanged from its existing archive entry; the rebuilt image SHA-256 matches the archived artifact.
+
+## 2026-11-12 — GOHO-NEXT-008 platform integration
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO BEADS | v0.2.4 | TEST | `beads/GOHO-BEADS-v0.2.4-TEST.bin`, `.hex` | H743 Board pin/peripheral profile, Board system startup, reusable WS2812 transmitter/encoder and shared build-source integration. Independent clean target build; application address `0x08020000`. No new hardware test was performed for this image. |
+
+Build evidence: source HEAD `0f323c9dacd01715c238b6f3525ba16931707581` plus the pre-existing dirty workspace and NEXT-008 changes; build directory `build/next008-h743`; GNU Arm Embedded Toolchain 10.3.1. BIN: 326056 bytes, SHA-256 `5cfba19e0bd0c05794c756235c4140a884fecdc10cac83c35d58270b148dd357`. HEX: 917065 bytes, SHA-256 `d42c70c9c25dbad9542323d690cd46afb4b92b20ca70059b297aeafeb93080d6`.
+
+The GOHO Bootloader is unchanged and was not rebuilt or re-archived in NEXT-008. The v0.2.4 image remains `TEST`; build success does not imply this exact image passed hardware validation.
