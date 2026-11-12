@@ -52,3 +52,14 @@ The GOHO Bootloader v1.0.0-TEST artifact is retained unchanged from its existing
 Build evidence: source HEAD `0f323c9dacd01715c238b6f3525ba16931707581` plus the pre-existing dirty workspace and NEXT-008 changes; build directory `build/next008-h743`; GNU Arm Embedded Toolchain 10.3.1. BIN: 326056 bytes, SHA-256 `5cfba19e0bd0c05794c756235c4140a884fecdc10cac83c35d58270b148dd357`. HEX: 917065 bytes, SHA-256 `d42c70c9c25dbad9542323d690cd46afb4b92b20ca70059b297aeafeb93080d6`.
 
 The GOHO Bootloader is unchanged and was not rebuilt or re-archived in NEXT-008. The v0.2.4 image remains `TEST`; build success does not imply this exact image passed hardware validation.
+
+## 2026-11-13 — GOHO-NEXT-009 Plaits module and shared-platform regression
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO PLAITS | v0.1.0 | TEST | `plaits/GOHO-PLAITS-v0.1.0-TEST.bin`, `.hex` | First independent GOHO PLAITS application. Uses the Mutable Instruments Plaits DSP source subset, shared GOHO H743 Board audio/ADC runtime, physical controls/CV, and USB MIDI Note On/Off processing. |
+| GOHO BEADS | v0.2.5 | TEST | `beads/GOHO-BEADS-v0.2.5-TEST.bin`, `.hex` | Clean regression build after shared H743 audio, ADC, USB, and target build integration. The image differs from v0.2.4 and was not hardware retested. |
+
+Both application vectors are linked at `0x08020000`. GNU Arm Embedded Toolchain 10.3.1 was used. GOHO source HEAD was `0f323c9dacd01715c238b6f3525ba16931707581` plus the pre-existing dirty workspace and NEXT-009 uncommitted changes. Build output directories are `build/next009-plaits` and `build/next009-beads`. Hashes and byte counts are in `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+The Plaits test image has not been installed or run on hardware. Host DSP/control tests and the target compile/link passed; this is not a hardware audio, MIDI enumeration, CV calibration, USB CDC, or USB Audio pass. Both images remain `TEST`.

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-12",
+  "generatedAt": "2026-11-13",
   "bootloaders": [
     {
       "id": "goho-bootloader-bin",
@@ -320,6 +320,74 @@
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 (workspace had pre-existing modifications plus NEXT-008 changes)",
       "buildDirectory": "build/next008-h743",
       "notes": "H743 Board/system/WS2812 platform integration. Target clean build passed; this exact image was not hardware-tested."
+    },
+    {
+      "id": "goho-plaits-v0.1.0-test-bin",
+      "name": "GOHO PLAITS",
+      "version": "0.1.0",
+      "file": "plaits/GOHO-PLAITS-v0.1.0-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 268804,
+      "sha256": "34b0763b10fb3b29ca93a7cdef657df48199a8aad6fc9242545efc04db74b2f9",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 uncommitted changes",
+      "buildDirectory": "build/next009-plaits",
+      "notes": "First GOHO PLAITS port build. Full upstream Plaits DSP registry, shared GOHO H743 audio runtime, panel/CV mapping, and USB MIDI Note receive. Hardware operation remains unverified."
+    },
+    {
+      "id": "goho-plaits-v0.1.0-test-hex",
+      "name": "GOHO PLAITS",
+      "version": "0.1.0",
+      "file": "plaits/GOHO-PLAITS-v0.1.0-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 756034,
+      "sha256": "d0cbb38f82f3de19484b647c83b46a04fba1e4e60b5b83f972ac2b84515dc2fb",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 uncommitted changes",
+      "buildDirectory": "build/next009-plaits",
+      "notes": "Intel HEX generated from the same GOHO PLAITS ELF as the BIN."
+    },
+    {
+      "id": "goho-beads-v0.2.5-test-bin",
+      "name": "GOHO BEADS",
+      "version": "0.2.5",
+      "file": "beads/GOHO-BEADS-v0.2.5-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 326248,
+      "sha256": "6702634a0f68e5934c3f9707df03362c57e37c28ffc33aadabb8ae685315e018",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 uncommitted changes",
+      "buildDirectory": "build/next009-beads",
+      "notes": "Clean regression build after GOHO-NEXT-009 shared H743 audio, ADC, USB, and build-source integration. No hardware retest was performed for this image."
+    },
+    {
+      "id": "goho-beads-v0.2.5-test-hex",
+      "name": "GOHO BEADS",
+      "version": "0.2.5",
+      "file": "beads/GOHO-BEADS-v0.2.5-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 917605,
+      "sha256": "31bb309290a66f3b8fb9045058877f03a3065ccc4301b3df5dbb1b4910bee88a",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-009 uncommitted changes",
+      "buildDirectory": "build/next009-beads",
+      "notes": "Intel HEX generated from the same GOHO BEADS ELF as the BIN."
     }
   ]
 }
