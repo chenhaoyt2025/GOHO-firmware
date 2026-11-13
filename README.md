@@ -7,8 +7,8 @@ Versioned firmware artifacts for GOHO products. This repository contains release
 | Product | Current catalog image | Flash address | Status |
 |---|---|---:|---|
 | GOHO Bootloader | `bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO BEADS | `beads/GOHO-BEADS-v0.2.7-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO PLAITS | `plaits/GOHO-PLAITS-v0.1.6-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO BEADS | `beads/GOHO-BEADS-v0.2.8-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO PLAITS | `plaits/GOHO-PLAITS-v0.1.7-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO PLAITS PLUS | `plaits/GOHO-PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO RINGS PLUS | `rings/GOHO-RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO ELEMENTS PLUS | `elements/GOHO-ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -28,3 +28,6 @@ The current NEXT-010 test images are GOHO PLAITS v0.1.5 and GOHO BEADS v0.2.7. E
 
 
 GOHO PLAITS v0.1.6-TEST corrects the USB MIDI product-string reference and gives the USB serial a product suffix to avoid stale host identity reuse. It removes the all-telemetry monitor page, restores `S` full/compact formatting, and cycles model selection in original Plaits order 0-23. The STM32H743 clean build passed; this image has not yet been installed or tested on hardware.
+
+
+GOHO PLAITS v0.1.7-TEST and GOHO BEADS v0.2.8-TEST use MIDI Pitch Bend for pitch instead of CC1. Plaits also restores the exact upstream engine index order and centers MODEL CV at 0 V; USB product strings are module-specific. Both are Host-tested and H743-built test images, not yet verified on hardware.
