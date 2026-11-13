@@ -728,6 +728,40 @@
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and user-requested MIDI/Plaits corrections",
       "buildDirectory": "build/beads-pitchbend-028",
       "notes": "Uses 14-bit Pitch Bend rather than CC1 for pitch and names the USB product goho beads. Host CTest 37/37 and STM32H743 clean build passed; hardware confirmation remains pending."
+    },
+    {
+      "id": "goho-beads-v0-2-9-test-bin",
+      "name": "GOHO BEADS",
+      "version": "0.2.9",
+      "file": "beads/GOHO-BEADS-v0.2.9-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 327160,
+      "sha256": "23191d305010fde7ec980c7f981a168a02492ae618cfac8fb4835c4f0b64a58f",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO BEADS operating-state LED change",
+      "buildDirectory": "build/goho-baseline-beads-029",
+      "notes": "Adds idle WS2812B state slots: 0 Auto/waiting, 1 USB, 2 Line, 3 Synth. USB product string remains lowercase pending shared identity-header authorization; hardware verification is pending."
+    },
+    {
+      "id": "goho-beads-v0-2-9-test-hex",
+      "name": "GOHO BEADS",
+      "version": "0.2.9",
+      "file": "beads/GOHO-BEADS-v0.2.9-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 920170,
+      "sha256": "ea29b4771941395a979e498b12996cb36a9b2feb0850d303d371295892594f3d",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO BEADS operating-state LED change",
+      "buildDirectory": "build/goho-baseline-beads-029",
+      "notes": "Adds idle WS2812B state slots: 0 Auto/waiting, 1 USB, 2 Line, 3 Synth. USB product string remains lowercase pending shared identity-header authorization; hardware verification is pending."
     }
   ]
 }

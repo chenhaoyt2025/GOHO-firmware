@@ -7,7 +7,7 @@ Versioned firmware artifacts for GOHO products. This repository contains release
 | Product | Current catalog image | Flash address | Status |
 |---|---|---:|---|
 | GOHO Bootloader | `bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO BEADS | `beads/GOHO-BEADS-v0.2.8-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO BEADS | `beads/GOHO-BEADS-v0.2.9-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO PLAITS | `plaits/GOHO-PLAITS-v0.1.7-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO PLAITS PLUS | `plaits/GOHO-PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO RINGS PLUS | `rings/GOHO-RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -31,3 +31,5 @@ GOHO PLAITS v0.1.6-TEST corrects the USB MIDI product-string reference and gives
 
 
 GOHO PLAITS v0.1.7-TEST and GOHO BEADS v0.2.8-TEST use MIDI Pitch Bend for pitch instead of CC1. Plaits also restores the exact upstream engine index order and centers MODEL CV at 0 V; USB product strings are module-specific. Both are Host-tested and H743-built test images, not yet verified on hardware.
+
+GOHO BEADS v0.2.9-TEST adds an idle WS2812B state indicator for Auto/waiting, USB, Line, and Synth source states. It was clean-built for STM32H743; this image has not been installed on hardware. Its USB product string remains lowercase pending the shared identity-header change.

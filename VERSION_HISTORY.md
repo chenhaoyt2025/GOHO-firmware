@@ -127,3 +127,12 @@ Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743 at application addres
 | GOHO BEADS | v0.2.8 | TEST | `beads/GOHO-BEADS-v0.2.8-TEST.bin`, `.hex` | MIDI pitch now uses Pitch Bend rather than CC1; the USB product name is `goho beads`. Host CTest and H743 clean build passed; physical verification is pending. |
 
 Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743, application address `0x08020000`, from GOHO source HEAD `0f323c9dacd01715c238b6f3525ba16931707581` plus the pre-existing dirty workspace and these user-requested corrections. Exact sizes, hashes and build directories are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`. Both images remain `TEST`.
+
+
+## 2026-11-13 — BEADS operating-state WS2812 indicator
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO BEADS | v0.2.9 | TEST | `beads/GOHO-BEADS-v0.2.9-TEST.bin`, `.hex` | Adds WS2812B idle state slots: 0 Auto/waiting, 1 USB, 2 Line, 3 Synth. USB product string remains lowercase pending the separately authorized shared identity update. Hardware verification is pending. |
+
+Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743 at application address `0x08020000`. Build directory: `build/goho-baseline-beads-029`. BIN: 327160 bytes, SHA-256 `23191d305010fde7ec980c7f981a168a02492ae618cfac8fb4835c4f0b64a58f`. HEX: 920170 bytes, SHA-256 `ea29b4771941395a979e498b12996cb36a9b2feb0850d303d371295892594f3d`. This is a clean target build only; the image has not been installed on hardware.
