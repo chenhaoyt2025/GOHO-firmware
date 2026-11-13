@@ -72,3 +72,15 @@ The earlier Rhea v0.1.0 files were removed from the current archive tree; they r
 | GOHO Rhea | v0.1.2 | TEST | `rhea/GOHO-RHEA-v0.1.2-TEST.bin`, `.hex` | Previous published image retained for rollback. |
 
 The unpublished v0.1.3 candidate was superseded before publication. Rhea v0.1.1 was removed from the current tree; earlier published bytes remain in Git history.
+
+
+## 2026-11-14 — GOHO-NEXT-012 clean H743 test candidates
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bootloader | v1.0.1 | TEST | bootloaders/GOHO-BOOTLOADER-v1.0.1-TEST.bin, .hex | Clean H743 build with dual USB MSC and custom DFU candidate paths; no physical protocol/update test has run. Preserve v1.0.0 as rollback. |
+| GOHO Bennu | v0.2.14 | TEST | bennu/GOHO-BENNU-v0.2.14-TEST.bin, .hex | Clean current-source H743 build. Existing v0.2.13 output differed from this clean build; new version is explicit and no hardware test was run. |
+| GOHO Pluto | v0.1.13 | TEST | pluto/GOHO-PLUTO-v0.1.13-TEST.bin, .hex | Clean current-source H743 build. Existing v0.1.12 output differed from this clean build; new version is explicit and no hardware test was run. |
+| GOHO Rhea | v0.1.4 | TEST | Existing archive reused | Clean current-source rebuild matched the existing v0.1.4 BIN and HEX exactly; no new version was created. |
+
+All artifacts remain TEST. The firmware archive does not imply successful dual-port enumeration, DFU transfer, CDC/MIDI/Audio host behavior, or hardware operation.
