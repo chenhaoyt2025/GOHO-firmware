@@ -136,3 +136,13 @@ Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743, application address 
 | GOHO BEADS | v0.2.9 | TEST | `beads/GOHO-BEADS-v0.2.9-TEST.bin`, `.hex` | Adds WS2812B idle state slots: 0 Auto/waiting, 1 USB, 2 Line, 3 Synth. USB product string remains lowercase pending the separately authorized shared identity update. Hardware verification is pending. |
 
 Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743 at application address `0x08020000`. Build directory: `build/goho-baseline-beads-029`. BIN: 327160 bytes, SHA-256 `23191d305010fde7ec980c7f981a168a02492ae618cfac8fb4835c4f0b64a58f`. HEX: 920170 bytes, SHA-256 `ea29b4771941395a979e498b12996cb36a9b2feb0850d303d371295892594f3d`. This is a clean target build only; the image has not been installed on hardware.
+
+
+## 2026-11-13 — GOHO Pluto and GOHO Bennu product identity
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Pluto | v0.1.9 | TEST | `plaits/GOHO-PLUTO-v0.1.9-TEST.bin`, `.hex` | Uses the user-confirmed short celestial product name in USB Audio/MIDI, product/configuration/interface descriptors, and CDC. Host CTest 37/37 and STM32H743 clean build passed; hardware installation was not run. |
+| GOHO Bennu | v0.2.11 | TEST | `beads/GOHO-BENNU-v0.2.11-TEST.bin`, `.hex` | Uses the user-confirmed short celestial product name in USB Audio/MIDI, product/configuration/interface descriptors, and CDC. Host CTest 37/37 and STM32H743 clean build passed; hardware installation was not run. |
+
+Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743 at application address `0x08020000`. The source checkout was `main` at `0f323c9dacd01715c238b6f3525ba16931707581` with pre-existing user changes preserved and no source-repository commit. Binary sizes and SHA-256 values are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`. The preceding v0.1.8/v0.2.10 identity builds used pre-confirmation names and were not archived.
