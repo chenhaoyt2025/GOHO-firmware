@@ -52,3 +52,13 @@ The preceding v0.1.0 images remain as rollback versions; their bytes and embedde
 | GOHO Pluto | v0.1.12 | TEST | `pluto/GOHO-PLUTO-v0.1.12-TEST.bin`, `.hex` | Clean STM32H743 regression build after the shared Pitch Bend/panel-control arbiter change; no physical-board test was run. |
 
 The current archive tree keeps the new images and their immediately previous versions. Exact build directories, sizes, and SHA-256 values are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`; superseded files remain recoverable in Git history.
+
+
+## 2026-11-14 — GOHO Rhea Reverb control correction
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Rhea | v0.1.2 | TEST | `rhea/GOHO-RHEA-v0.1.2-TEST.bin`, `.hex` | Clean H743 rebuild. M3 Reverb and M1 Feedback paths are separated per Rings Plus; Host CTest 40/40 passed. Hardware test not run. |
+| GOHO Rhea | v0.1.1 | TEST | `rhea/GOHO-RHEA-v0.1.1-TEST.bin`, `.hex` | Previous successful H743 build retained for rollback. Hardware test not run. |
+
+The earlier Rhea v0.1.0 files were removed from the current archive tree; they remain recoverable from Git history.
