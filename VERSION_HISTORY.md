@@ -1,6 +1,6 @@
 # GOHO Firmware Version History
 
-Only the current and immediately previous images for GOHO Bennu, GOHO Pluto, and the four Plus products are kept in the latest repository tree. Older releases remain recoverable from Git commit history.
+Only the current and immediately previous images for GOHO Bennu, GOHO Pluto, GOHO Rhea, and the four Plus products are kept in the latest repository tree. Older releases remain recoverable from Git commit history.
 
 ## 2026-11-13 — GOHO Rhea first firmware
 
@@ -59,6 +59,16 @@ The current archive tree keeps the new images and their immediately previous ver
 | Product | Version | Status | Artifacts | Notes |
 |---|---:|---|---|---|
 | GOHO Rhea | v0.1.2 | TEST | `rhea/GOHO-RHEA-v0.1.2-TEST.bin`, `.hex` | Clean H743 rebuild. M3 Reverb and M1 Feedback paths are separated per Rings Plus; Host CTest 40/40 passed. Hardware test not run. |
-| GOHO Rhea | v0.1.1 | TEST | `rhea/GOHO-RHEA-v0.1.1-TEST.bin`, `.hex` | Previous successful H743 build retained for rollback. Hardware test not run. |
+| GOHO Rhea | v0.1.1 | TEST | `rhea/GOHO-RHEA-v0.1.1-TEST.bin`, `.hex` | Earlier H743 build; removed from the current tree when the archive was trimmed. Hardware test not run. |
 
 The earlier Rhea v0.1.0 files were removed from the current archive tree; they remain recoverable from Git history.
+
+
+## 2026-11-14 — GOHO Rhea Rings Plus signal-path correction
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Rhea | v0.1.4 | TEST | `rhea/GOHO-RHEA-v0.1.4-TEST.bin`, `.hex` | Matches Rings Plus external-exciter RMS threshold, disconnected-CV neutralization, and 0–60 semitone Pitch range. Rhea Host tests 2/2 and clean H743 build passed; hardware audio test not run. |
+| GOHO Rhea | v0.1.2 | TEST | `rhea/GOHO-RHEA-v0.1.2-TEST.bin`, `.hex` | Previous published image retained for rollback. |
+
+The unpublished v0.1.3 candidate was superseded before publication. Rhea v0.1.1 was removed from the current tree; earlier published bytes remain in Git history.
