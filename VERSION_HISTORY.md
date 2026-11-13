@@ -108,3 +108,12 @@ Both applications use GNU Arm Embedded Toolchain 10.3.1 and link at `0x08020000`
 | GOHO BEADS | v0.2.7 | TEST | `beads/GOHO-BEADS-v0.2.7-TEST.bin`, `.hex` | Final BEADS regression image for shared board display, CDC service, USB identity and Reverb entry point; extended BEADS reverb controls retained. Host CTest `37/37 PASS`; H743 clean build passed. Hardware retest not run. |
 
 These final images use GNU Arm Embedded Toolchain 10.3.1 and application address `0x08020000`. The earlier v0.1.4/v0.2.6 NEXT-010 successful builds remain archived as separate immutable TEST artifacts; their build maps/logs were preserved under the source repository `build/next010-intermediate-*` directories. The v0.1.5/v0.2.7 build directories, byte sizes, source revision note, and hashes are listed in `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+
+## 2026-11-13 — GOHO Plaits CDC, USB MIDI identity and engine-order fix
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO PLAITS | v0.1.6 | TEST | `plaits/GOHO-PLAITS-v0.1.6-TEST.bin`, `.hex` | MIDI interface/jack strings now reference the module product name and USB serial includes a product suffix; the all-data CDC page is removed, `S` toggles full/compact format, and button/`E+`/`E-` model traversal follows original Plaits model numbers 0-23. H743 clean build passed; hardware installation and host USB enumeration were not run. |
+
+Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743 at application address `0x08020000`. GOHO source HEAD was `0f323c9dacd01715c238b6f3525ba16931707581` plus the pre-existing dirty workspace and this user-requested Plaits fix. Build directory: `build/plaits-user-fix-016`. BIN: 307000 bytes, SHA-256 `53a85f8abe6118f182abd99f44e1323b2617dec238b3260877a95e40876813ba`. HEX: 863470 bytes, SHA-256 `73c11ff48872fb310b93529362c57448e5b2daa64536076dbc6cf584bd11b3fc`. Status remains TEST until the user installs and checks the image.

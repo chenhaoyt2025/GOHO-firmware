@@ -626,6 +626,40 @@
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO-NEXT-010 changes",
       "buildDirectory": "build/next010-beads",
       "notes": "Final NEXT-010 BEADS regression image including the shared service code and final Host-tested page parser. H743 clean build and Host CTest passed; exact image not installed on hardware."
+    },
+    {
+      "id": "goho-plaits-v0-1-6-test-bin",
+      "name": "GOHO PLAITS",
+      "version": "0.1.6",
+      "file": "plaits/GOHO-PLAITS-v0.1.6-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 307000,
+      "sha256": "53a85f8abe6118f182abd99f44e1323b2617dec238b3260877a95e40876813ba",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and Plaits user-requested fixes",
+      "buildDirectory": "build/plaits-user-fix-016",
+      "notes": "Corrects Plaits USB MIDI product naming, removes the all-telemetry CDC page and restores S full/compact formatting, and follows original Plaits engine model order 0-23. H743 clean build passed; final image not yet installed on hardware."
+    },
+    {
+      "id": "goho-plaits-v0-1-6-test-hex",
+      "name": "GOHO PLAITS",
+      "version": "0.1.6",
+      "file": "plaits/GOHO-PLAITS-v0.1.6-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 863470,
+      "sha256": "73c11ff48872fb310b93529362c57448e5b2daa64536076dbc6cf584bd11b3fc",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and Plaits user-requested fixes",
+      "buildDirectory": "build/plaits-user-fix-016",
+      "notes": "Corrects Plaits USB MIDI product naming, removes the all-telemetry CDC page and restores S full/compact formatting, and follows original Plaits engine model order 0-23. H743 clean build passed; final image not yet installed on hardware."
     }
   ]
 }

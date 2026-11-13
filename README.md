@@ -8,7 +8,7 @@ Versioned firmware artifacts for GOHO products. This repository contains release
 |---|---|---:|---|
 | GOHO Bootloader | `bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO BEADS | `beads/GOHO-BEADS-v0.2.7-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO PLAITS | `plaits/GOHO-PLAITS-v0.1.5-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO PLAITS | `plaits/GOHO-PLAITS-v0.1.6-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO PLAITS PLUS | `plaits/GOHO-PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO RINGS PLUS | `rings/GOHO-RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO ELEMENTS PLUS | `elements/GOHO-ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -25,3 +25,6 @@ GOHO-NEXT-010 added `GOHO-PLAITS-v0.1.4-TEST` and `GOHO-BEADS-v0.2.6-TEST`. Both
 
 
 The current NEXT-010 test images are GOHO PLAITS v0.1.5 and GOHO BEADS v0.2.7. Earlier v0.1.4 and v0.2.6 NEXT-010 builds are retained in the archive history. The final images passed Host and STM32H743 build checks but have not been installed on a board.
+
+
+GOHO PLAITS v0.1.6-TEST corrects the USB MIDI product-string reference and gives the USB serial a product suffix to avoid stale host identity reuse. It removes the all-telemetry monitor page, restores `S` full/compact formatting, and cycles model selection in original Plaits order 0-23. The STM32H743 clean build passed; this image has not yet been installed or tested on hardware.
