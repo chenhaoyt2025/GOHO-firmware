@@ -830,6 +830,40 @@
       "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and user-confirmed GOHO celestial naming change",
       "buildDirectory": "build/goho-naming-plaits-019",
       "notes": "Intel HEX for the user-confirmed GOHO Pluto identity. GOHO H743 clean build; hardware installation was not run."
+    },
+    {
+      "id": "goho-pluto-v0-1-10-test-bin",
+      "name": "GOHO Pluto",
+      "version": "0.1.10",
+      "file": "plaits/GOHO-PLUTO-v0.1.10-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 307272,
+      "sha256": "804c1353871c15ec62962111e6200615d0f0db91f6bc86541796adb282ffb11a",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO Plaits MIDI Note release fix",
+      "buildDirectory": "build/plaits-midi-note-release-0110",
+      "notes": "Fixes MIDI Note Off ownership so the panel pitch, physical gate, and original free-running path resume after the last MIDI Note is released. Host CTest 37/37 and STM32H743 clean build passed; hardware installation was not run."
+    },
+    {
+      "id": "goho-pluto-v0-1-10-test-hex",
+      "name": "GOHO Pluto",
+      "version": "0.1.10",
+      "file": "plaits/GOHO-PLUTO-v0.1.10-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 864235,
+      "sha256": "582f5c761c1f61b866e854aac2fa3dd01303677e5ed23c8f9d73cd8f0bdc1000",
+      "buildDate": "2026-11-13",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "sourceRevision": "0f323c9dacd01715c238b6f3525ba16931707581 plus pre-existing dirty workspace and GOHO Plaits MIDI Note release fix",
+      "buildDirectory": "build/plaits-midi-note-release-0110",
+      "notes": "Fixes MIDI Note Off ownership so the panel pitch, physical gate, and original free-running path resume after the last MIDI Note is released. Host CTest 37/37 and STM32H743 clean build passed; hardware installation was not run."
     }
   ]
 }

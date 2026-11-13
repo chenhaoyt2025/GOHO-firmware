@@ -8,7 +8,7 @@ Versioned firmware artifacts for GOHO products. This repository contains release
 |---|---|---:|---|
 | GOHO Bootloader | `bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO Bennu | `beads/GOHO-BENNU-v0.2.11-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Pluto | `plaits/GOHO-PLUTO-v0.1.9-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Pluto | `plaits/GOHO-PLUTO-v0.1.10-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO PLAITS PLUS | `plaits/GOHO-PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO RINGS PLUS | `rings/GOHO-RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO ELEMENTS PLUS | `elements/GOHO-ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |

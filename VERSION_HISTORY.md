@@ -146,3 +146,12 @@ Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743 at application addres
 | GOHO Bennu | v0.2.11 | TEST | `beads/GOHO-BENNU-v0.2.11-TEST.bin`, `.hex` | Uses the user-confirmed short celestial product name in USB Audio/MIDI, product/configuration/interface descriptors, and CDC. Host CTest 37/37 and STM32H743 clean build passed; hardware installation was not run. |
 
 Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743 at application address `0x08020000`. The source checkout was `main` at `0f323c9dacd01715c238b6f3525ba16931707581` with pre-existing user changes preserved and no source-repository commit. Binary sizes and SHA-256 values are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`. The preceding v0.1.8/v0.2.10 identity builds used pre-confirmation names and were not archived.
+
+
+## 2026-11-13 — GOHO Pluto MIDI Note release recovery
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Pluto | v0.1.10 | TEST | `plaits/GOHO-PLUTO-v0.1.10-TEST.bin`, `.hex` | Note Off now releases MIDI ownership; panel Pitch, physical Gate/Level and the original free-running Plaits path resume after the final held note is released. Host CTest 37/37 and STM32H743 clean build passed; hardware installation was not run. |
+
+Built with GNU Arm Embedded Toolchain 10.3.1 for STM32H743 at application address `0x08020000`. Host regression log is `build/goho-naming-host-midi-note-fix-ctest.log`; the target build log is `build/plaits-midi-note-release-0110-build.log`. Exact sizes and SHA-256 values are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`. The image remains TEST pending board confirmation.
