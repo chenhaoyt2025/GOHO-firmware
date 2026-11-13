@@ -88,3 +88,23 @@ Built for STM32H743 with GNU Arm Embedded Toolchain 10.3.1 at application addres
 | GOHO PLAITS | v0.1.3 | TEST | `plaits/GOHO-PLAITS-v0.1.3-TEST.bin`, `.hex` | Shared GOHO H743 WS2812 display for five direct pots plus seven 4051 channels; CDC pages with `0=engines` and `9=all`; USB product/configuration/interface descriptors use `goho modular synth`.
 
 Built from GOHO source HEAD `0f323c9dacd01715c238b6f3525ba16931707581` plus the existing dirty workspace and this NEXT-009 correction. Build directory: `/Users/hoho_mini/Documents/GOHO-eurorack/build/next009-plaits-repair-20261113`; target: STM32H743, application address `0x08020000`, GNU Arm Embedded Toolchain 10.3.1. BIN: 304016 bytes, SHA-256 `9d52e12b8f218645761c3ee53ce8d3673f1225d2c681aa0d2ffb6456881f66e2`. HEX: 855071 bytes, SHA-256 `d02450fdeefbbc50de19f66f09d452f5794d280fbe85ddc2e2e96ef18c7e7a1c`. Hardware LED, CDC, and host USB-name confirmation remain pending; status is TEST.
+
+
+## 2026-11-13 — GOHO-NEXT-010 shared platform update
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO PLAITS | v0.1.4 | TEST | `plaits/GOHO-PLAITS-v0.1.4-TEST.bin`, `.hex` | Shares the GOHO H743 WS2812 display, CDC page/banner/XXX service, GOHO-PLAITS USB identity and established BEADS reverb implementation through the public GOHO facade. H743 clean build and Host suite passed; this exact image was not installed on hardware. |
+| GOHO BEADS | v0.2.6 | TEST | `beads/GOHO-BEADS-v0.2.6-TEST.bin`, `.hex` | Regression image for shared WS2812, CDC, USB identity and reverb entry point; preserves BEADS extended reverb controls. H743 clean build and Host suite passed; this exact image was not installed on hardware. |
+
+Both applications use GNU Arm Embedded Toolchain 10.3.1 and link at `0x08020000`. Source HEAD was `0f323c9dacd01715c238b6f3525ba16931707581` plus the pre-existing dirty workspace and NEXT-010 edits. Exact build directories, sizes and SHA-256 values are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`. Both artifacts remain `TEST`; build and Host tests do not constitute board verification.
+
+
+## 2026-11-13 — GOHO-NEXT-010 final verified software builds
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO PLAITS | v0.1.5 | TEST | `plaits/GOHO-PLAITS-v0.1.5-TEST.bin`, `.hex` | Final NEXT-010 image with shared WS2812 panel display, CDC monitor digit parsing/commands/XXX path, GOHO-PLAITS USB identity and existing BEADS-based reverb path. Host CTest `37/37 PASS`; H743 clean build passed. Hardware installation and user-facing USB name/LED tests remain pending. |
+| GOHO BEADS | v0.2.7 | TEST | `beads/GOHO-BEADS-v0.2.7-TEST.bin`, `.hex` | Final BEADS regression image for shared board display, CDC service, USB identity and Reverb entry point; extended BEADS reverb controls retained. Host CTest `37/37 PASS`; H743 clean build passed. Hardware retest not run. |
+
+These final images use GNU Arm Embedded Toolchain 10.3.1 and application address `0x08020000`. The earlier v0.1.4/v0.2.6 NEXT-010 successful builds remain archived as separate immutable TEST artifacts; their build maps/logs were preserved under the source repository `build/next010-intermediate-*` directories. The v0.1.5/v0.2.7 build directories, byte sizes, source revision note, and hashes are listed in `firmware-manifest.json` and `SHA256SUMS.txt`.

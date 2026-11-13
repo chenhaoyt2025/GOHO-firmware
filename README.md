@@ -7,8 +7,8 @@ Versioned firmware artifacts for GOHO products. This repository contains release
 | Product | Current catalog image | Flash address | Status |
 |---|---|---:|---|
 | GOHO Bootloader | `bootloaders/GOHO-BOOTLOADER-v1.0.0-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO BEADS | `beads/GOHO-BEADS-v0.2.5-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO PLAITS | `plaits/GOHO-PLAITS-v0.1.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO BEADS | `beads/GOHO-BEADS-v0.2.7-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO PLAITS | `plaits/GOHO-PLAITS-v0.1.5-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO PLAITS PLUS | `plaits/GOHO-PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO RINGS PLUS | `rings/GOHO-RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO ELEMENTS PLUS | `elements/GOHO-ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -20,3 +20,8 @@ All images remain `TEST`; archive inclusion does not imply current hardware vali
 
 
 GOHO PLAITS v0.1.3-TEST restores the CDC monitor pages (`0=engines`, `9=all`), applies the shared GOHO H743 WS2812 display path to all five direct pots and seven 4051 controls, and labels USB product/configuration/interface descriptors `goho modular synth`. This is a clean STM32H743 build; the new image has not yet been installed for hardware confirmation.
+
+GOHO-NEXT-010 added `GOHO-PLAITS-v0.1.4-TEST` and `GOHO-BEADS-v0.2.6-TEST`. Both use the GOHO-owned shared WS2812, CDC, product identity and Reverb paths. They are software-built test images and have not been installed on hardware.
+
+
+The current NEXT-010 test images are GOHO PLAITS v0.1.5 and GOHO BEADS v0.2.7. Earlier v0.1.4 and v0.2.6 NEXT-010 builds are retained in the archive history. The final images passed Host and STM32H743 build checks but have not been installed on a board.
