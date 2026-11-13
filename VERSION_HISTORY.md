@@ -2,6 +2,12 @@
 
 Only the current and immediately previous images for GOHO Bennu, GOHO Pluto, and the four Plus products are kept in the latest repository tree. Older releases remain recoverable from Git commit history.
 
+## 2026-11-13 — GOHO Rhea first firmware
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Rhea | v0.1.0 | TEST | `rhea/GOHO-RHEA-v0.1.0-TEST.bin`, `.hex` | First GOHO Rhea target, built from `goho_modules/rhea/makefile` using the official fixed-source Rings DSP and GOHO H743 audio/control/USB/LED services. Host tests and H743 target build passed; no physical-board test was run. |
+
 ## 2026-11-13 — GOHO Bennu and GOHO Pluto naming/build outputs
 
 | Product | Version | Status | Artifacts | Notes |
@@ -36,3 +42,13 @@ All newly built GOHO images use GNU Arm Embedded Toolchain 10.3.1 and link their
 | Peaks Plus | v0.1.1 | TEST | `peaks-plus/PEAKS-PLUS-v0.1.1-TEST.bin`, `.hex` | Rebuilt H743 image; USB product/configuration/interface and CDC startup label use `Peaks Plus`. |
 
 The preceding v0.1.0 images remain as rollback versions; their bytes and embedded USB names are unchanged. The Plus projects do not add a USB MIDI class in this identity-only change. Exact sizes and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`. All v0.1.1 builds are untested on hardware and remain `TEST`.
+
+
+## 2026-11-14 — GOHO Bennu and GOHO Pluto Pitch-control regression builds
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.2.13 | TEST | `bennu/GOHO-BENNU-v0.2.13-TEST.bin`, `.hex` | Clean STM32H743 regression build after the shared Pitch Bend/panel-control arbiter change; no physical-board test was run. |
+| GOHO Pluto | v0.1.12 | TEST | `pluto/GOHO-PLUTO-v0.1.12-TEST.bin`, `.hex` | Clean STM32H743 regression build after the shared Pitch Bend/panel-control arbiter change; no physical-board test was run. |
+
+The current archive tree keeps the new images and their immediately previous versions. Exact build directories, sizes, and SHA-256 values are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`; superseded files remain recoverable in Git history.
