@@ -84,3 +84,13 @@ The unpublished v0.1.3 candidate was superseded before publication. Rhea v0.1.1 
 | GOHO Rhea | v0.1.4 | TEST | Existing archive reused | Clean current-source rebuild matched the existing v0.1.4 BIN and HEX exactly; no new version was created. |
 
 All artifacts remain TEST. The firmware archive does not imply successful dual-port enumeration, DFU transfer, CDC/MIDI/Audio host behavior, or hardware operation.
+
+## 2026-11-14 — GOHO-NEXT-012 dual USB application candidates
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.2.15 | TEST | `bennu/GOHO-BENNU-v0.2.15-TEST.bin`, `.hex` | Clean STM32H743 build with independent FS/HS CDC, Audio and MIDI class state plus service-level port arbitration. Host suite 44/44 passed; physical USB tests not run. |
+| GOHO Pluto | v0.1.14 | TEST | `pluto/GOHO-PLUTO-v0.1.14-TEST.bin`, `.hex` | Same GOHO dual USB application integration, built from Pluto GOHO target. Host suite 44/44 passed; physical USB tests not run. |
+| GOHO Rhea | v0.1.5 | TEST | `rhea/GOHO-RHEA-v0.1.5-TEST.bin`, `.hex` | Same GOHO dual USB application integration, built from Rhea GOHO target. Host suite 44/44 passed; physical USB tests not run. |
+
+All three application images link at `0x08020000` and use GNU Arm Embedded Toolchain 10.3.1. The bundled ST USB Middleware class copies were modified with explicit authorization to isolate per-device endpoint and MIDI state. Firmware artifacts remain TEST pending physical board/host verification. The repository tree retains only the current and immediately previous version of each product; removed older artifacts remain in Git history. Exact file sizes and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`.
