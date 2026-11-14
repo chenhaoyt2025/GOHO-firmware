@@ -115,3 +115,15 @@ The former generic bootloader v1.0.0/v1.0.1 artifacts were removed from the curr
 | GOHO Bennu | v0.2.16 | TEST | `bennu/GOHO-BENNU-v0.2.16-TEST.bin`, `.hex` | Fresh clean STM32H743 build from the normal Bennu target. It defines `GOHO_USB_RUNTIME_HS_ONLY`, uses PB14/PB15 for runtime USB, and enables the normal Freeze/Seed button path on PA11/PA12. Hardware button, USB and audio behavior for this image have not been tested. Retain v0.2.15 as the previous image. |
 
 Bennu v0.2.14 was removed from the current tree to keep only v0.2.16 and its immediately previous v0.2.15; older files remain in Git history.
+
+
+## 2026-11-14 — GOHO Pluto and GOHO Rhea buttons-enabled runtime USB builds
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Pluto | v0.1.15 | TEST | `pluto/GOHO-PLUTO-v0.1.15-TEST.bin`, `.hex` | Fresh clean H743 build using HS-only runtime USB; normal shared Freeze/Seed button scanning remains enabled. Hardware tests not run. |
+| GOHO Pluto | v0.1.14 | TEST | `pluto/GOHO-PLUTO-v0.1.14-TEST.bin`, `.hex` | Previous dual-port build retained for rollback; native OTG_FS shares PA11/PA12 with Freeze/Seed. |
+| GOHO Rhea | v0.1.6 | TEST | `rhea/GOHO-RHEA-v0.1.6-TEST.bin`, `.hex` | Fresh clean H743 build using HS-only runtime USB; normal shared Freeze/Seed button scanning remains enabled. Hardware tests not run. |
+| GOHO Rhea | v0.1.5 | TEST | `rhea/GOHO-RHEA-v0.1.5-TEST.bin`, `.hex` | Previous dual-port build retained for rollback; native OTG_FS shares PA11/PA12 with Freeze/Seed. |
+
+Pluto v0.1.13 and Rhea v0.1.4 were removed from the current tree so each product keeps only its newest two versions; older files remain in Git history.
