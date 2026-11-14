@@ -1,6 +1,6 @@
 # GOHO Firmware Version History
 
-Only the current and immediately previous images for GOHO Bennu, GOHO Pluto, GOHO Rhea, and the four Plus products are kept in the latest repository tree. Older releases remain recoverable from Git commit history.
+Only the current and immediately previous images for each GOHO product and bootloader variant (including GOHO Bootloader EX) are kept in the latest repository tree. Older releases remain recoverable from Git commit history.
 
 ## 2026-11-13 — GOHO Rhea first firmware
 
@@ -94,3 +94,15 @@ All artifacts remain TEST. The firmware archive does not imply successful dual-p
 | GOHO Rhea | v0.1.5 | TEST | `rhea/GOHO-RHEA-v0.1.5-TEST.bin`, `.hex` | Same GOHO dual USB application integration, built from Rhea GOHO target. Host suite 44/44 passed; physical USB tests not run. |
 
 All three application images link at `0x08020000` and use GNU Arm Embedded Toolchain 10.3.1. The bundled ST USB Middleware class copies were modified with explicit authorization to isolate per-device endpoint and MIDI state. Firmware artifacts remain TEST pending physical board/host verification. The repository tree retains only the current and immediately previous version of each product; removed older artifacts remain in Git history. Exact file sizes and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+
+## 2026-11-14 — GOHO Bootloader and GOHO Bootloader EX split
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bootloader | v1.0.3 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.0.3-TEST.bin`, `.hex` | Current user version; MSC virtual disk on PB14/PB15 only. Native OTG_FS is not initialized. No custom DFU. Build passed; physical update behavior not verified. |
+| GOHO Bootloader | v1.0.2 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.0.2-TEST.bin`, `.hex` | Previous dual-port MSC-only build; retained as rollback. |
+| GOHO Bootloader EX | v1.0.1 | TEST | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.1-TEST.bin`, `.hex` | Current experimental version; MSC virtual disk on native OTG_FS only. PB14/PB15 is not initialized. No custom DFU. Build passed; physical update behavior not verified. |
+| GOHO Bootloader EX | v1.0.0 | TEST | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.0-TEST.bin`, `.hex` | Previous single-port OTG_FS build before explicit EX naming; retained as rollback. |
+
+The former generic bootloader v1.0.0/v1.0.1 artifacts were removed from the current tree because they lacked variant identity. Existing records remain in Git history. Exact artifact sizes and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`.
