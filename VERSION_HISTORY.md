@@ -106,3 +106,12 @@ All three application images link at `0x08020000` and use GNU Arm Embedded Toolc
 | GOHO Bootloader EX | v1.0.0 | TEST | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.0-TEST.bin`, `.hex` | Previous single-port OTG_FS build before explicit EX naming; retained as rollback. |
 
 The former generic bootloader v1.0.0/v1.0.1 artifacts were removed from the current tree because they lacked variant identity. Existing records remain in Git history. Exact artifact sizes and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+
+## 2026-11-14 — GOHO Bennu buttons-enabled runtime USB build
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.2.16 | TEST | `bennu/GOHO-BENNU-v0.2.16-TEST.bin`, `.hex` | Fresh clean STM32H743 build from the normal Bennu target. It defines `GOHO_USB_RUNTIME_HS_ONLY`, uses PB14/PB15 for runtime USB, and enables the normal Freeze/Seed button path on PA11/PA12. Hardware button, USB and audio behavior for this image have not been tested. Retain v0.2.15 as the previous image. |
+
+Bennu v0.2.14 was removed from the current tree to keep only v0.2.16 and its immediately previous v0.2.15; older files remain in Git history.
