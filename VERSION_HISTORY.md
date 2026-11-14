@@ -115,3 +115,29 @@ The former generic bootloader v1.0.0/v1.0.1 artifacts were removed from the curr
 | GOHO Bennu | v0.2.16 | TEST | `bennu/GOHO-BENNU-v0.2.16-TEST.bin`, `.hex` | Fresh clean STM32H743 build from the normal Bennu target. It defines `GOHO_USB_RUNTIME_HS_ONLY`, uses PB14/PB15 for runtime USB, and enables the normal Freeze/Seed button path on PA11/PA12. Hardware button, USB and audio behavior for this image have not been tested. Retain v0.2.15 as the previous image. |
 
 Bennu v0.2.14 was removed from the current tree to keep only v0.2.16 and its immediately previous v0.2.15; older files remain in Git history.
+
+
+## 2026-11-14 — GOHO Pluto and GOHO Rhea buttons-enabled runtime USB builds
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Pluto | v0.1.15 | TEST | `pluto/GOHO-PLUTO-v0.1.15-TEST.bin`, `.hex` | Fresh clean H743 build using HS-only runtime USB; normal shared Freeze/Seed button scanning remains enabled. Hardware tests not run. |
+| GOHO Pluto | v0.1.14 | TEST | `pluto/GOHO-PLUTO-v0.1.14-TEST.bin`, `.hex` | Previous dual-port build retained for rollback; native OTG_FS shares PA11/PA12 with Freeze/Seed. |
+| GOHO Rhea | v0.1.6 | TEST | `rhea/GOHO-RHEA-v0.1.6-TEST.bin`, `.hex` | Fresh clean H743 build using HS-only runtime USB; normal shared Freeze/Seed button scanning remains enabled. Hardware tests not run. |
+| GOHO Rhea | v0.1.5 | TEST | `rhea/GOHO-RHEA-v0.1.5-TEST.bin`, `.hex` | Previous dual-port build retained for rollback; native OTG_FS shares PA11/PA12 with Freeze/Seed. |
+
+Pluto v0.1.13 and Rhea v0.1.4 were removed from the current tree so each product keeps only its newest two versions; older files remain in Git history.
+
+## 2026-11-14 — GOHO Bootloader and Bennu button-policy builds
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bootloader (Duo) | v1.0.4 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.0.4-TEST.bin`, `.hex` | Clean H743 build; MSC updater on PB14/PB15. Physical behavior not tested. |
+| GOHO Bootloader | v1.0.3 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.0.3-TEST.bin`, `.hex` | Previous user version retained for rollback. |
+| GOHO Bootloader EX | v1.0.2 | TEST | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.2-TEST.bin`, `.hex` | Clean H743 single-port native-USB build; physical behavior not tested. |
+| GOHO Bootloader EX | v1.0.1 | TEST | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.1-TEST.bin`, `.hex` | Previous EX version retained for rollback. |
+| GOHO Bennu | v0.2.17 | TEST | `bennu/GOHO-BENNU-v0.2.17-TEST.bin`, `.hex` | Clean H743 normal product build. Freeze/Seed buttons enabled; runtime USB uses PB14/PB15. Hardware behavior not tested. |
+| GOHO Bennu | v0.2.16 | TEST | `bennu/GOHO-BENNU-v0.2.16-TEST.bin`, `.hex` | Previous normal Bennu build retained for rollback. |
+| GOHO Bennu EX | v0.2.17 | TEST | `bennu/GOHO-BENNU-EX-v0.2.17-TEST.bin`, `.hex` | Separate EX test application; Freeze/Seed buttons intentionally disabled for GOHO Bootloader EX testing. Runtime USB uses PB14/PB15. Hardware behavior not tested. |
+
+The four current images were built clean from the GOHO source project using GNU Arm Embedded Toolchain 10.3.1. Both Bennu application vector tables link at `0x08020000`. No hardware tests were run for these exact builds. Bennu v0.2.15 and bootloader v1.0.2 / EX v1.0.0 were removed from the current tree to retain the latest two images in each established series; older artifacts remain in Git history.
