@@ -8,10 +8,10 @@ Versioned GOHO firmware images and release metadata. This repository contains fi
 |---|---|---|---:|---|
 | GOHO Bootloader (Duo) | `bootloaders/GOHO-BOOTLOADER-v1.0.5-TEST` (`.bin`, `.hex`) | `bootloaders/GOHO-BOOTLOADER-v1.0.4-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO Bootloader EX | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.2-TEST` (`.bin`, `.hex`) | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.1-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO Bennu | `bennu/GOHO-BENNU-v0.2.18-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-v0.2.17-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Bennu EX | `bennu/GOHO-BENNU-EX-v0.2.17-TEST` (`.bin`, `.hex`) | — | `0x08020000` | TEST |
-| GOHO Pluto | `pluto/GOHO-PLUTO-v0.1.15-TEST` (`.bin`, `.hex`) | `pluto/GOHO-PLUTO-v0.1.14-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Rhea | `rhea/GOHO-RHEA-v0.1.6-TEST` (`.bin`, `.hex`) | `rhea/GOHO-RHEA-v0.1.5-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu | `bennu/GOHO-BENNU-v0.2.19-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-v0.2.18-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu EX | `bennu/GOHO-BENNU-EX-v0.2.18-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-EX-v0.2.17-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Pluto | `pluto/GOHO-PLUTO-v0.1.16-TEST` (`.bin`, `.hex`) | `pluto/GOHO-PLUTO-v0.1.15-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Rhea | `rhea/GOHO-RHEA-v0.1.7-TEST` (`.bin`, `.hex`) | `rhea/GOHO-RHEA-v0.1.6-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Plaits Plus | `plaits-plus/PLAITS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `plaits-plus/PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Rings Plus | `rings-plus/RINGS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `rings-plus/RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Elements Plus | `elements-plus/ELEMENTS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `elements-plus/ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |

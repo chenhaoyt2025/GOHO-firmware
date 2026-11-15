@@ -153,3 +153,15 @@ The four current images were built clean from the GOHO source project using GNU 
 | GOHO Bennu | v0.2.17 | TEST | `bennu/GOHO-BENNU-v0.2.17-TEST.bin`, `.hex` | Previous published version retained for rollback. |
 
 Native STM32 ROM DFU uses the PA11/PA12 OTG_FS port. All new artifacts remain `TEST`; exact file sizes and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`. Source revision: `499098d5863c0ee8564df78c5f2c9370775459b6` plus uncommitted GOHO U2 ROM DFU changes.
+
+
+## 2026-11-15 — USB MIDI product-name descriptor correction
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.2.19 | TEST | `bennu/GOHO-BENNU-v0.2.19-TEST.bin`, `.hex` | Clean H743 build; retains the `GOHO Bennu` USB product identity and sets USB-MIDI 1.0 unused interface/jack string indices to zero. Host descriptor test passed; physical host display not tested. |
+| GOHO Bennu EX | v0.2.18 | TEST | `bennu/GOHO-BENNU-EX-v0.2.18-TEST.bin`, `.hex` | Clean H743 EX build; USB product identity is `GOHO Bennu EX`. Host descriptor test passed; physical host display not tested. |
+| GOHO Pluto | v0.1.16 | TEST | `pluto/GOHO-PLUTO-v0.1.16-TEST.bin`, `.hex` | Clean H743 build; USB product identity is `GOHO Pluto`. Host descriptor test passed; physical host display not tested. |
+| GOHO Rhea | v0.1.7 | TEST | `rhea/GOHO-RHEA-v0.1.7-TEST.bin`, `.hex` | Clean H743 build; USB product identity is `GOHO Rhea`. Host descriptor test passed; physical host display not tested. |
+
+The latest two versions are retained for each affected series. Bennu normal v0.2.17, Pluto v0.1.14 and Rhea v0.1.5 were removed from the current tree; older history remains in Git. Exact sizes and SHA-256 values are listed in `firmware-manifest.json` and `SHA256SUMS.txt`. Source revision: `499098d5863c0ee8564df78c5f2c9370775459b6 + uncommitted GOHO source changes including USB-MIDI string-index correction`.
