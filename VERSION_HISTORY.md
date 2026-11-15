@@ -174,3 +174,16 @@ The latest two versions are retained for each affected series. Bennu normal v0.2
 | GOHO Bennu | v0.2.19 | TEST | `bennu/GOHO-BENNU-v0.2.19-TEST.bin`, `.hex` | Previous image retained for comparison. |
 
 The user also reports that the GOHO Bennu EX image appears in the host MIDI list without the `unknown MIDI device` suffix; retain that as a user-reported reference for the later MIDI-name investigation. It was not verified by this build. Bennu v0.2.18 was removed from the current tree to retain the latest two images; it remains recoverable from Git history.
+
+## 2026-11-15 — GOHO-NEXT-013 shared platform updates
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bootloader | v1.0.6 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.0.6-TEST.bin`, `.hex` | Clean H743 build; USB2/PB14-PB15 MSC. Physical update and handoff not tested. |
+| GOHO Bootloader EX | v1.0.3 | TEST | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.3-TEST.bin`, `.hex` | Clean H743 build; USB1/PA11-PA12 MSC. Physical update and handoff not tested. |
+| GOHO Bennu | v0.2.21 | TEST | `bennu/GOHO-BENNU-v0.2.21-TEST.bin`, `.hex` | Standard USB split, common U1/U2, CV/Gate/probe and shared Reverb updates. H743 build and Host suite passed; hardware not tested. |
+| GOHO Bennu EX | v0.2.19 | TEST | `bennu/GOHO-BENNU-EX-v0.2.19-TEST.bin`, `.hex` | USB1-only EX build; Freeze/Seed handlers remain disabled. H743 build passed; hardware not tested. |
+| GOHO Pluto | v0.1.17 | TEST | `pluto/GOHO-PLUTO-v0.1.17-TEST.bin`, `.hex` | Standard USB split and common CV/Gate/probe/Reverb integration. H743 build passed; hardware not tested. |
+| GOHO Rhea | v0.1.8 | TEST | `rhea/GOHO-RHEA-v0.1.8-TEST.bin`, `.hex` | Standard USB split and common CV/Gate/probe/Reverb integration. H743 build passed; hardware not tested. |
+
+All six builds used the GOHO source project at `5c24927fe2f675134095d0827742532c5d113b8e` plus its uncommitted NEXT-013 working tree, and GNU Arm Embedded Toolchain 10.3.1. Artifacts remain TEST pending hardware verification. Exact sizes and hashes are in `firmware-manifest.json` and `SHA256SUMS.txt`.
