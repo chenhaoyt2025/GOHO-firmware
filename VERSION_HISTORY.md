@@ -165,3 +165,12 @@ Native STM32 ROM DFU uses the PA11/PA12 OTG_FS port. All new artifacts remain `T
 | GOHO Rhea | v0.1.7 | TEST | `rhea/GOHO-RHEA-v0.1.7-TEST.bin`, `.hex` | Clean H743 build; USB product identity is `GOHO Rhea`. Host descriptor test passed; physical host display not tested. |
 
 The latest two versions are retained for each affected series. Bennu normal v0.2.17, Pluto v0.1.14 and Rhea v0.1.5 were removed from the current tree; older history remains in Git. Exact sizes and SHA-256 values are listed in `firmware-manifest.json` and `SHA256SUMS.txt`. Source revision: `499098d5863c0ee8564df78c5f2c9370775459b6 + uncommitted GOHO source changes including USB-MIDI string-index correction`.
+
+## 2026-11-15 — Bennu USB 2-only isolation build
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.2.20 | TEST | `bennu/GOHO-BENNU-v0.2.20-TEST.bin`, `.hex` | Clean H743 build with `GOHO_USB_RUNTIME_HS_ONLY`: USB 1 / OTG_FS is not initialized; USB 2 / PB14-PB15 carries CDC, USB Audio and USB MIDI. This is an isolation test image following the user's report that v0.2.19's ports did not operate correctly. Physical USB and audio behavior are not yet verified. |
+| GOHO Bennu | v0.2.19 | TEST | `bennu/GOHO-BENNU-v0.2.19-TEST.bin`, `.hex` | Previous image retained for comparison. |
+
+The user also reports that the GOHO Bennu EX image appears in the host MIDI list without the `unknown MIDI device` suffix; retain that as a user-reported reference for the later MIDI-name investigation. It was not verified by this build. Bennu v0.2.18 was removed from the current tree to retain the latest two images; it remains recoverable from Git history.
