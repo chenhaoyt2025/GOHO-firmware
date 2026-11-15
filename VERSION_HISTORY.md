@@ -187,3 +187,13 @@ The user also reports that the GOHO Bennu EX image appears in the host MIDI list
 | GOHO Rhea | v0.1.8 | TEST | `rhea/GOHO-RHEA-v0.1.8-TEST.bin`, `.hex` | Standard USB split and common CV/Gate/probe/Reverb integration. H743 build passed; hardware not tested. |
 
 All six builds used the GOHO source project at `5c24927fe2f675134095d0827742532c5d113b8e` plus its uncommitted NEXT-013 working tree, and GNU Arm Embedded Toolchain 10.3.1. Artifacts remain TEST pending hardware verification. Exact sizes and hashes are in `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+
+## 2026-11-16 — GOHO Bennu USB2-only recovery build
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.2.22 | TEST | `bennu/GOHO-BENNU-v0.2.22-TEST.bin`, `.hex` | Restores the USB2-only route. USB1/OTG_FS is not initialized; CDC, USB Audio and USB MIDI use PB14/PB15; PA11/PA12 remain available for Freeze/Seed. Clean H743 build passed; exact image awaits board retest. |
+| GOHO Bennu | v0.2.20 | TEST | `bennu/GOHO-BENNU-v0.2.20-TEST.bin`, `.hex` | Retained as rollback image. |
+
+Bennu v0.2.21 was removed from the current downloadable tree per the user's restoration request; its history remains in Git. v0.2.19 was also removed so the current tree keeps only v0.2.22 and v0.2.20.
