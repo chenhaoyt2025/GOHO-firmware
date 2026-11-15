@@ -12,6 +12,7 @@ Versioned GOHO firmware images and release metadata. This repository contains fi
 | GOHO Bennu EX | `bennu/GOHO-BENNU-EX-v0.2.21-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-EX-v0.2.20-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Pluto | `pluto/GOHO-PLUTO-v0.1.19-TEST` (`.bin`, `.hex`) | `pluto/GOHO-PLUTO-v0.1.18-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Rhea | `rhea/GOHO-RHEA-v0.1.10-TEST` (`.bin`, `.hex`) | `rhea/GOHO-RHEA-v0.1.9-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Elements | `elements/GOHO-ELEMENTS-v0.1.0-TEST` (`.bin`, `.hex`) | — | `0x08020000` | TEST |
 | Plaits Plus | `plaits-plus/PLAITS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `plaits-plus/PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Rings Plus | `rings-plus/RINGS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `rings-plus/RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Elements Plus | `elements-plus/ELEMENTS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `elements-plus/ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -29,6 +30,10 @@ Standard GOHO products use USB1/OTG_FS (PA11/PA12) for CDC and USB2/OTG_HS (PB14
 
 
 Bennu v0.2.21 was withdrawn from the current download set after the user reported missing USB Audio and non-working shared Freeze/Seed controls. v0.2.22 restores the USB2-only application route: USB1/OTG_FS is not initialized, and CDC, USB Audio and USB MIDI run on PB14/PB15. The exact image has passed a clean H743 build; board retest is still required. v0.2.20 is retained as the rollback image.
+
+## GOHO-NEXT-016 TEST candidate
+
+GOHO Elements v0.1.0 is the first GOHO Elements image. It uses the dedicated Elements target, GOHO H743 platform and application address `0x08020000`. Host CTest passed 50/50 and the clean H743 build passed. Hardware acceptance has not been run, so this image remains TEST. Exact source revision, size and SHA-256 are in `firmware-manifest.json` and `SHA256SUMS.txt`.
 
 
 ## GOHO-NEXT-014 TEST images

@@ -32,6 +32,15 @@ The prebuilt Plus binaries retain their original embedded USB descriptors. No se
 All newly built GOHO images use GNU Arm Embedded Toolchain 10.3.1 and link their application vectors at `0x08020000`. Exact build directories, sizes, and hashes are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`. The fresh images remain `TEST` until the user checks these exact images on hardware.
 
 
+## 2026-11-16 — GOHO Elements first target image
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Elements | v0.1.0 | TEST | `elements/GOHO-ELEMENTS-v0.1.0-TEST.bin`, `.hex` | First GOHO Elements firmware from source commit `d225e39b8bc34b7888e40f8e4d51fa0d925cfb5f`. Host CTest 50/50 and clean STM32H743 build passed; no physical-board acceptance has been run. |
+
+The image links at `0x08020000` and uses GNU Arm Embedded Toolchain 10.3.1. It remains TEST until the user tests this exact image on the board. Size and SHA-256 values are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+
 ## 2026-11-13 — Plus device identity rebuilds
 
 | Product | Version | Status | Artifacts | Notes |

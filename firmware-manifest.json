@@ -752,6 +752,45 @@
       "buildDirectory": "build/next015-rhea",
       "buildTargetName": "goho_rhea",
       "notes": "Clean independent GOHO H743 build for NEXT-015. Rhea current model and supported settings persistence. Common CDC persistence/calibration commands are present. Physical Flash save/reboot, measured calibration, migration and MSC-preservation tests were not run; keep TEST."
+    },
+    {
+      "id": "elements-0.1.0-test-bin",
+      "name": "GOHO Elements",
+      "version": "0.1.0",
+      "file": "elements/GOHO-ELEMENTS-v0.1.0-TEST.bin",
+      "format": "bin",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 549484,
+      "sha256": "9019286479fa5bf52a9db3e2b2360622b6598629a3fa93fba43cb7dba4cdd798",
+      "buildDate": "2026-11-16",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "toolchain": "GNU Arm Embedded Toolchain 10.3.1",
+      "sourceRevision": "d225e39b8bc34b7888e40f8e4d51fa0d925cfb5f",
+      "buildDirectory": "build/next016-elements",
+      "buildTargetName": "goho_elements",
+      "notes": "First GOHO Elements target build from the NEXT-016 source commit. Host CTest 50/50 and clean STM32H743 build passed. Physical board acceptance remains NOT RUN; retain TEST status.",
+      "default": true
+    },
+    {
+      "id": "elements-0.1.0-test-hex",
+      "name": "GOHO Elements",
+      "version": "0.1.0",
+      "file": "elements/GOHO-ELEMENTS-v0.1.0-TEST.hex",
+      "format": "hex",
+      "type": "application",
+      "status": "TEST",
+      "sizeBytes": 1545521,
+      "sha256": "8e5206c90d82314e87dc1a560c2892551270986d054655b8956bcc1967e7858f",
+      "buildDate": "2026-11-16",
+      "flashAddress": "0x08020000",
+      "buildTarget": "STM32H743",
+      "toolchain": "GNU Arm Embedded Toolchain 10.3.1",
+      "sourceRevision": "d225e39b8bc34b7888e40f8e4d51fa0d925cfb5f",
+      "buildDirectory": "build/next016-elements",
+      "buildTargetName": "goho_elements",
+      "notes": "First GOHO Elements target build from the NEXT-016 source commit. Host CTest 50/50 and clean STM32H743 build passed. Physical board acceptance remains NOT RUN; retain TEST status."
     }
   ]
 }
