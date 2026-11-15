@@ -209,3 +209,14 @@ Bennu v0.2.21 was removed from the current downloadable tree per the user's rest
 | GOHO Rhea | v0.1.9 | TEST | `rhea/GOHO-RHEA-v0.1.9-TEST.bin`, `.hex` | Clean H743 build with its namespaced settings/calibration loading. A Rhea settings-save action and physical persistence test are not implemented/run. |
 
 All application images link at `0x08020000`; GNU Arm Embedded Toolchain 10.3.1. Source: local GOHO commit `f9a4a39d649f55a0877b717414c657c9588c388f`, mirrored on GitHub as `4b8a579a719181d916ccfbfbd47d7f0d288ca307` (tree `c399bc2169ec7e1c5574cbbed55f05bfaaf9bcfd`). Every image remains TEST. No Bootloader was rebuilt for NEXT-014.
+
+## 2026-11-16 — GOHO-NEXT-015 shared persistence workflow candidates
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.2.24 | TEST | `bennu/GOHO-BENNU-v0.2.24-TEST.bin`, `.hex` | Clean GOHO H743 build; shared CDC calibration/status, capacity reporting and coalesced Bennu state persistence. |
+| GOHO Bennu EX | v0.2.21 | TEST | `bennu/GOHO-BENNU-EX-v0.2.21-TEST.bin`, `.hex` | Clean GOHO H743 EX build; persistence software included; EX remains a separate test variant. |
+| GOHO Pluto | v0.1.19 | TEST | `pluto/GOHO-PLUTO-v0.1.19-TEST.bin`, `.hex` | Clean GOHO H743 build; explicit namespaced model/settings save and shared calibration console. |
+| GOHO Rhea | v0.1.10 | TEST | `rhea/GOHO-RHEA-v0.1.10-TEST.bin`, `.hex` | Clean GOHO H743 build; explicit namespaced model/settings save and shared calibration console. |
+
+All images were built independently from the GOHO project with GNU Arm Embedded Toolchain 10.3.1 and link at `0x08020000`. They remain TEST: no physical Flash programming, calibration measurement, power-cycle, cross-module persistence, or MSC-update-preservation test was run. Host CTest passed 48/48; exact file hashes are recorded in the source project NEXT-015 report and this repository's manifest/checksum list.

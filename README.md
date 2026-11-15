@@ -8,10 +8,10 @@ Versioned GOHO firmware images and release metadata. This repository contains fi
 |---|---|---|---:|---|
 | GOHO Bootloader (Duo) | `bootloaders/GOHO-BOOTLOADER-v1.0.6-TEST` (`.bin`, `.hex`) | `bootloaders/GOHO-BOOTLOADER-v1.0.5-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO Bootloader EX | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.3-TEST` (`.bin`, `.hex`) | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.2-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO Bennu | `bennu/GOHO-BENNU-v0.2.23-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-v0.2.22-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Bennu EX | `bennu/GOHO-BENNU-EX-v0.2.20-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-EX-v0.2.19-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Pluto | `pluto/GOHO-PLUTO-v0.1.18-TEST` (`.bin`, `.hex`) | `pluto/GOHO-PLUTO-v0.1.17-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Rhea | `rhea/GOHO-RHEA-v0.1.9-TEST` (`.bin`, `.hex`) | `rhea/GOHO-RHEA-v0.1.8-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu | `bennu/GOHO-BENNU-v0.2.24-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-v0.2.23-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu EX | `bennu/GOHO-BENNU-EX-v0.2.21-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-EX-v0.2.20-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Pluto | `pluto/GOHO-PLUTO-v0.1.19-TEST` (`.bin`, `.hex`) | `pluto/GOHO-PLUTO-v0.1.18-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Rhea | `rhea/GOHO-RHEA-v0.1.10-TEST` (`.bin`, `.hex`) | `rhea/GOHO-RHEA-v0.1.9-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Plaits Plus | `plaits-plus/PLAITS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `plaits-plus/PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Rings Plus | `rings-plus/RINGS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `rings-plus/RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Elements Plus | `elements-plus/ELEMENTS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `elements-plus/ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -34,3 +34,7 @@ Bennu v0.2.21 was withdrawn from the current download set after the user reporte
 ## GOHO-NEXT-014 TEST images
 
 Bennu v0.2.23, Bennu EX v0.2.20, Pluto v0.1.18 and Rhea v0.1.9 are clean STM32H743 builds with the shared Sector 7 user-data backend. The Host suite passed 46/46. These images remain TEST: no physical Flash migration, power-loss, cross-firmware persistence or USB/audio board verification was run. See `firmware-manifest.json` for exact source revision, build directory, size and SHA-256.
+
+## GOHO-NEXT-015 TEST candidates
+
+The current Bennu v0.2.24, Bennu EX v0.2.21, Pluto v0.1.19 and Rhea v0.1.10 images include the shared persistence/calibration software. All four are clean H743 builds at `0x08020000`. Host CTest 48/48 passed; physical Flash programming, power-cycle persistence, calibration accuracy and MSC-update preservation remain untested. They are TEST candidates, not hardware-accepted releases. SHA-256 and byte size are in `firmware-manifest.json` and `SHA256SUMS.txt`.
