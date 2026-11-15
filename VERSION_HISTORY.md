@@ -141,3 +141,15 @@ Pluto v0.1.13 and Rhea v0.1.4 were removed from the current tree so each product
 | GOHO Bennu EX | v0.2.17 | TEST | `bennu/GOHO-BENNU-EX-v0.2.17-TEST.bin`, `.hex` | Separate EX test application; Freeze/Seed buttons intentionally disabled for GOHO Bootloader EX testing. Runtime USB uses PB14/PB15. Hardware behavior not tested. |
 
 The four current images were built clean from the GOHO source project using GNU Arm Embedded Toolchain 10.3.1. Both Bennu application vector tables link at `0x08020000`. No hardware tests were run for these exact builds. Bennu v0.2.15 and bootloader v1.0.2 / EX v1.0.0 were removed from the current tree to retain the latest two images in each established series; older artifacts remain in Git history.
+
+
+## 2026-11-15 — GOHO Bennu U2 native STM32 ROM DFU entry
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bootloader (Duo) | v1.0.5 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.0.5-TEST.bin`, `.hex` | Consumes the one-shot U2 DFU request before GOHO peripheral initialization and branches to the STM32H743 system-memory bootloader at `0x1FF09800`; normal MSC remains on PB14/PB15. Clean H743 build; physical handoff and DFU transfer not tested. |
+| GOHO Bootloader (Duo) | v1.0.4 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.0.4-TEST.bin`, `.hex` | Previous published version retained for rollback. |
+| GOHO Bennu | v0.2.18 | TEST | `bennu/GOHO-BENNU-v0.2.18-TEST.bin`, `.hex` | U2 on PD12 requests native STM32 ROM DFU; U1 and MIDI System Reset retain virtual-disk entry. Clean H743 build; physical button, ROM handoff, MIDI and disk behavior not tested. |
+| GOHO Bennu | v0.2.17 | TEST | `bennu/GOHO-BENNU-v0.2.17-TEST.bin`, `.hex` | Previous published version retained for rollback. |
+
+Native STM32 ROM DFU uses the PA11/PA12 OTG_FS port. All new artifacts remain `TEST`; exact file sizes and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`. Source revision: `499098d5863c0ee8564df78c5f2c9370775459b6` plus uncommitted GOHO U2 ROM DFU changes.
