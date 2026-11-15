@@ -197,3 +197,15 @@ All six builds used the GOHO source project at `5c24927fe2f675134095d0827742532c
 | GOHO Bennu | v0.2.20 | TEST | `bennu/GOHO-BENNU-v0.2.20-TEST.bin`, `.hex` | Retained as rollback image. |
 
 Bennu v0.2.21 was removed from the current downloadable tree per the user's restoration request; its history remains in Git. v0.2.19 was also removed so the current tree keeps only v0.2.22 and v0.2.20.
+
+
+## 2026-11-16 — GOHO-NEXT-014 shared H743 user-data persistence candidates
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.2.23 | TEST | `bennu/GOHO-BENNU-v0.2.23-TEST.bin`, `.hex` | Clean H743 build with the Sector 7 shared user-data journal and Bennu legacy-data read/migration path. Host CTest 46/46 passed. Physical migration and power-loss recovery were not run. |
+| GOHO Bennu EX | v0.2.20 | TEST | `bennu/GOHO-BENNU-EX-v0.2.20-TEST.bin`, `.hex` | Clean H743 EX build with the same persistent-storage backend. Physical persistence tests were not run. |
+| GOHO Pluto | v0.1.18 | TEST | `pluto/GOHO-PLUTO-v0.1.18-TEST.bin`, `.hex` | Clean H743 build with its namespaced settings/calibration loading. A Pluto settings-save action and physical persistence test are not implemented/run. |
+| GOHO Rhea | v0.1.9 | TEST | `rhea/GOHO-RHEA-v0.1.9-TEST.bin`, `.hex` | Clean H743 build with its namespaced settings/calibration loading. A Rhea settings-save action and physical persistence test are not implemented/run. |
+
+All application images link at `0x08020000`; GNU Arm Embedded Toolchain 10.3.1. Source: local GOHO commit `f9a4a39d649f55a0877b717414c657c9588c388f`, mirrored on GitHub as `4b8a579a719181d916ccfbfbd47d7f0d288ca307` (tree `c399bc2169ec7e1c5574cbbed55f05bfaaf9bcfd`). Every image remains TEST. No Bootloader was rebuilt for NEXT-014.
