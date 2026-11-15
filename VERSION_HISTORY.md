@@ -220,3 +220,5 @@ All application images link at `0x08020000`; GNU Arm Embedded Toolchain 10.3.1. 
 | GOHO Rhea | v0.1.10 | TEST | `rhea/GOHO-RHEA-v0.1.10-TEST.bin`, `.hex` | Clean GOHO H743 build; explicit namespaced model/settings save and shared calibration console. |
 
 All images were built independently from the GOHO project with GNU Arm Embedded Toolchain 10.3.1 and link at `0x08020000`. They remain TEST: no physical Flash programming, calibration measurement, power-cycle, cross-module persistence, or MSC-update-preservation test was run. Host CTest passed 48/48; exact file hashes are recorded in the source project NEXT-015 report and this repository's manifest/checksum list.
+
+The current download tree now retains only the latest two firmware images for every product and Bootloader variant. Bootloader v1.0.4 and Bootloader EX v1.0.1 were removed from the current tree; both remain recoverable from Git history. No Bootloader was rebuilt for NEXT-015.
