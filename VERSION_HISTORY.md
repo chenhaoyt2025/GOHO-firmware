@@ -263,3 +263,15 @@ The downloadable Bootloader tree retains the 768 KiB and 512 KiB variants for bo
 | GOHO Rhea | v0.1.11 | TEST | `rhea/GOHO-RHEA-v0.1.11-TEST.bin` + matching HEX | 211416 bytes; SHA-256 `6c1181f9c2ab791e2cd66a1aa4e136dff633b8735d47234660fe2cbe41f1e450` |
 
 All three clean H743 builds use `GOHO_USB_RUNTIME_HS_ONLY`: CDC, USB Audio and USB MIDI are registered on USB2/PB14-PB15. USB1/OTG_FS is not initialized by the application and remains available for STM32 ROM DFU. USB enumeration, CDC traffic, USB Audio streaming and MIDI behavior on these exact images are not yet tested. Pluto v0.1.18 and Rhea v0.1.9 were removed from the active download tree to retain only the newest two versions; their history remains in Git.
+
+## 2026-11-16 — GOHO-NEXT-017 physical control map and regression candidates
+
+| Product | Version | Status | Artifacts | BIN size | BIN SHA-256 | Notes |
+|---|---:|---|---|---:|---|---|
+| GOHO Bennu | v0.2.26 | TEST | `bennu/GOHO-BENNU-v0.2.26-TEST.bin`, `.hex` | 356156 | `045e8596ad2d57ef0620cebbd040e8399ffba53f7e8a175286cd41594dc10411` | Common physical K/MUX identity and corrected board CV monitor; hardware NOT RUN. |
+| GOHO Bennu EX | v0.2.22 | TEST | `bennu/GOHO-BENNU-EX-v0.2.22-TEST.bin`, `.hex` | 356036 | `a1a3026b0f52b509998a4c4ea1a5e76ed70cb8326dabaff78e9c2fa51ba6e740` | EX application policy retained; USB2 runtime profile; hardware NOT RUN. |
+| GOHO Pluto | v0.1.21 | TEST | `pluto/GOHO-PLUTO-v0.1.21-TEST.bin`, `.hex` | 337660 | `449491a4514e8dab21011c31bd9e112f76ebe6e2be53057c417448b47da761ec` | Common physical K/MUX identity and board CV monitor; hardware NOT RUN. |
+| GOHO Rhea | v0.1.12 | TEST | `rhea/GOHO-RHEA-v0.1.12-TEST.bin`, `.hex` | 214840 | `5566158a36063e431ae791099cc5d177f61ef43840e1a1c02a1b9083a6eb36da` | Common physical K/MUX identity and board CV monitor; hardware NOT RUN. |
+| GOHO Eris | v0.1.3 | TEST | `eris/GOHO-ERIS-v0.1.3-TEST.bin`, `.hex` | 552444 | `7e49961babeaa5536e67c8feb827619afabb48cfb685152e3b82894a10cf5afd` | Common physical K/MUX identity and board CV monitor; hardware NOT RUN. |
+
+All five builds used GOHO's independent Makefiles, GNU Arm Embedded Toolchain 10.3.1 and application vector `0x08020000`. Release Host CTest passed 51/51. Hardware controls, audio, LEDs, USB traffic, persistence and bootloader entry/exit were not tested on a physical board. The current download tree retains only the newest two images per affected product series; superseded files remain in Git history. The source working tree used for builds was based on `8b2866035b73b8ed6d38f146fc564be5331a5ed1` plus pre-existing NEXT-016 changes and NEXT-017 working changes; it was not clean.
