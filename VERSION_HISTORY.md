@@ -275,3 +275,20 @@ All three clean H743 builds use `GOHO_USB_RUNTIME_HS_ONLY`: CDC, USB Audio and U
 | GOHO Eris | v0.1.3 | TEST | `eris/GOHO-ERIS-v0.1.3-TEST.bin`, `.hex` | 552444 | `7e49961babeaa5536e67c8feb827619afabb48cfb685152e3b82894a10cf5afd` | Common physical K/MUX identity and board CV monitor; hardware NOT RUN. |
 
 All five builds used GOHO's independent Makefiles, GNU Arm Embedded Toolchain 10.3.1 and application vector `0x08020000`. Release Host CTest passed 51/51. Hardware controls, audio, LEDs, USB traffic, persistence and bootloader entry/exit were not tested on a physical board. The current download tree retains only the newest two images per affected product series; superseded files remain in Git history. The source working tree used for builds was based on `8b2866035b73b8ed6d38f146fc564be5331a5ed1` plus pre-existing NEXT-016 changes and NEXT-017 working changes; it was not clean.
+
+
+## 2026-11-16 — GOHO-NEXT-018 identity and version protocol candidates
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.3.0 | TEST | `bennu/GOHO-BENNU-v0.3.0-TEST.bin`, `.hex` | Clean H743 build; USB1 CDC + USB2 Audio/MIDI; MIDI version query and version-based WS2812 startup display. Board checks not run. |
+| GOHO Bennu EX | v0.3.0 | TEST | `bennu/GOHO-BENNU-EX-v0.3.0-TEST.bin`, `.hex` | Clean H743 build with the separate EX button policy; split USB configuration. Board checks not run. |
+| GOHO Pluto | v0.2.0 | TEST | `pluto/GOHO-PLUTO-v0.2.0-TEST.bin`, `.hex` | Clean H743 build with split USB and the shared version protocol/display. Board checks not run. |
+| GOHO Rhea | v0.2.0 | TEST | `rhea/GOHO-RHEA-v0.2.0-TEST.bin`, `.hex` | Clean H743 build with split USB and the shared version protocol/display. Board checks not run. |
+| GOHO Eris | v0.1.4 | TEST | `eris/GOHO-ERIS-v0.1.4-TEST.bin`, `.hex` | Clean H743 build with split USB and the shared version protocol/display. Board checks not run. |
+| GOHO bootloader Duo | v1.0.9 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.0.9-TEST.bin`, `.hex` | Clean H743 build; version TXT entry is `109.TXT`; physical disk/update not tested. |
+| GOHO bootloaderex | v1.0.6 | TEST | `bootloaders/GOHO-BOOTLOADEREX-v1.0.6-TEST.bin`, `.hex` | Clean H743 build; version TXT entry is `EX106.TXT`; physical disk/update not tested. |
+| GOHO bootloader EX512 | v1.0.5 | TEST | `bootloaders/GOHO-BOOT-LOADER-EX-512-v1.0.5-TEST.bin`, `.hex` | Clean H743 build; version TXT entry is `EX512105.TXT`; physical disk/update not tested. |
+
+The archive keeps the current and immediately previous image for each updated
+series. The source repository was dirty at HEAD `8b2866035b73b8ed6d38f146fc564be5331a5ed1`; these artifacts include the existing working tree plus NEXT-018 changes and do not represent a committed source snapshot.
