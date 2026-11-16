@@ -321,3 +321,16 @@ All nine images were built with GNU Arm Embedded Toolchain 10.3.1 from the GOHO 
 | GOHO Eris | v0.1.6 | TEST | USB2 only: CDC + Audio + MIDI; USB1 not initialized | 557172 | `78080706c955e9826060225e0a649a3baf3ee393c22a11531ba19000f0950b96` |
 
 All five are clean H743 builds with the established vector address. Host CTest 53/53 passed. Bennu EX keeps its USB1-only port assignment and disabled Freeze/Seed test variant policy. The earlier NEXT-019 split-routed images are not suitable for verifying the current route; their exact bytes are identified in the manifest as superseded. Physical USB, audio, MIDI, and button tests on these exact images remain unrun; all stay TEST.
+
+
+## 2026-11-17 — GOHO-NEXT-019 runtime MIDI version re-query
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.3.3 | TEST | `bennu/GOHO-BENNU-v0.3.3-TEST.bin`, `.hex` | Every Channel 16 CC119=1 query independently returns Bootloader then APP version records; clean H743 build and Host CTest 53/53. USB2-only runtime route retained. |
+| GOHO Bennu EX | v0.3.3 | TEST | `bennu/GOHO-BENNU-EX-v0.3.3-TEST.bin`, `.hex` | Same query fix; clean H743 build and Host CTest 53/53. USB1-only runtime route retained. |
+| GOHO Pluto | v0.2.3 | TEST | `pluto/GOHO-PLUTO-v0.2.3-TEST.bin`, `.hex` | Same query fix; clean H743 build and Host CTest 53/53. USB2-only runtime route retained. |
+| GOHO Rhea | v0.2.3 | TEST | `rhea/GOHO-RHEA-v0.2.3-TEST.bin`, `.hex` | Same query fix; clean H743 build and Host CTest 53/53. USB2-only runtime route retained. |
+| GOHO Eris | v0.1.7 | TEST | `eris/GOHO-ERIS-v0.1.7-TEST.bin`, `.hex` | Same query fix; clean H743 build and Host CTest 53/53. USB2-only runtime route retained. |
+
+All five images were built with GNU Arm Embedded Toolchain 10.3.1 at application address `0x08020000`. No physical-board validation was run. The active archive retains each product's latest two versions; the replaced oldest BIN/HEX pairs were removed from this checkout and remain recoverable from Git history.
