@@ -10,9 +10,9 @@ Versioned GOHO firmware images and release metadata. This repository contains fi
 | GOHO bootloaderex (768 KiB, EX) | `bootloaders/GOHO-BOOTLOADEREX-v1.0.5-TEST` (`.bin`, `.hex`) | `bootloaders/GOHO-BOOT-LOADER-EX-512-v1.0.4-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO Bennu | `bennu/GOHO-BENNU-v0.2.25-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-v0.2.24-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Bennu EX | `bennu/GOHO-BENNU-EX-v0.2.21-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-EX-v0.2.20-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Pluto | `pluto/GOHO-PLUTO-v0.1.19-TEST` (`.bin`, `.hex`) | `pluto/GOHO-PLUTO-v0.1.18-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Rhea | `rhea/GOHO-RHEA-v0.1.10-TEST` (`.bin`, `.hex`) | `rhea/GOHO-RHEA-v0.1.9-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Eris | `eris/GOHO-ERIS-v0.1.1-TEST` (`.bin`, `.hex`) | — (v0.1.0 withdrawn) | `0x08020000` | TEST |
+| GOHO Pluto | `pluto/GOHO-PLUTO-v0.1.20-TEST` (`.bin`, `.hex`) | `pluto/GOHO-PLUTO-v0.1.19-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Rhea | `rhea/GOHO-RHEA-v0.1.11-TEST` (`.bin`, `.hex`) | `rhea/GOHO-RHEA-v0.1.10-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Eris | `eris/GOHO-ERIS-v0.1.2-TEST` (`.bin`, `.hex`) | `eris/GOHO-ERIS-v0.1.1-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Plaits Plus | `plaits-plus/PLAITS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `plaits-plus/PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Rings Plus | `rings-plus/RINGS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `rings-plus/RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Elements Plus | `elements-plus/ELEMENTS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `elements-plus/ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -26,14 +26,14 @@ For a virtual-disk application update, copy only the matching application `.bin`
 
 The 768 KiB GOHO bootloader uses PB14/PB15 for its MSC virtual-disk updater and leaves native OTG_FS uninitialized. The 768 KiB GOHO bootloaderex uses native OTG_FS on USB1 and does not initialize PB14/PB15. The separately named 512 KiB builds keep the same USB-port split. GOHO Bennu U2 can request a one-shot handoff to the STM32 system-memory ROM DFU on native OTG_FS PA11/PA12; this is the ST-provided ROM, not a custom GOHO DFU class. Without an application, MIDI is unavailable; the virtual disk is entered with the Media startup button.
 
-Standard GOHO products use USB1/OTG_FS (PA11/PA12) for CDC and USB2/OTG_HS (PB14/PB15) for USB Audio/MIDI, except the Bennu v0.2.22 recovery candidate, which uses USB2 for all application USB services. Bennu EX is the USB1-only application test variant; USB2 is not initialized. `GOHO bootloader` uses USB2 for MSC virtual-disk updates; `GOHO bootloaderex` uses USB1. The STM32 ROM DFU path remains separate. All NEXT-013 artifacts are `TEST` builds; no hardware validation is claimed. Application images link at `0x08020000`, and the updater protects the settings sector beginning at `0x081E0000`. The current Plus images use their product names in their USB identity strings. Exact artifact sizes, SHA-256 values, source revision, build target and toolchain are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`. The current downloadable tree retains only the latest and immediately previous image for each product; older images remain recoverable from Git history.
+Standard GOHO Bennu, Pluto, Rhea and Eris applications use USB2/OTG_HS (PB14/PB15) for CDC, USB Audio and USB MIDI. They do not initialize USB1/OTG_FS (PA11/PA12), which remains available for STM32 ROM DFU. Bennu EX is the separate USB1-only application test variant. `GOHO bootloader` uses USB2 for MSC virtual-disk updates; `GOHO bootloaderex` uses USB1. The STM32 ROM DFU path remains separate. All images are `TEST` unless explicitly hardware-accepted. Application images link at `0x08020000`, and the updater protects the settings sector beginning at `0x081E0000`. Exact artifact sizes, SHA-256 values, source revision, build target and toolchain are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`. The current downloadable tree retains only the latest and immediately previous image for each product; older images remain recoverable from Git history.
 
 
 Bennu v0.2.21 was withdrawn from the current download set after the user reported missing USB Audio and non-working shared Freeze/Seed controls. v0.2.22 restores the USB2-only application route: USB1/OTG_FS is not initialized, and CDC, USB Audio and USB MIDI run on PB14/PB15. The exact image has passed a clean H743 build; board retest is still required. v0.2.20 is retained as the rollback image.
 
 ## GOHO-NEXT-016 TEST candidate
 
-GOHO Elements v0.1.0 is the first GOHO Elements image. It uses the dedicated Elements target, GOHO H743 platform and application address `0x08020000`. Host CTest passed 50/50 and the clean H743 build passed. Hardware acceptance has not been run, so this image remains TEST. Exact source revision, size and SHA-256 are in `firmware-manifest.json` and `SHA256SUMS.txt`.
+GOHO Eris v0.1.2 is the current Eris TEST image. It uses the independent GOHO Eris target and application address `0x08020000`; its standard USB route puts CDC, Audio and MIDI on USB2/PB14-PB15. H743 clean build passed, but hardware acceptance has not been run. Exact source revision, size and SHA-256 are in `firmware-manifest.json` and `SHA256SUMS.txt`.
 
 
 ## GOHO-NEXT-014 TEST images

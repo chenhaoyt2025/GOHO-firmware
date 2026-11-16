@@ -253,3 +253,13 @@ The current Bennu download tree retains v0.2.24 and v0.2.25; v0.2.23 artifacts w
 | GOHO boot loader ex 512 | v1.0.4 | TEST | `bootloaders/GOHO-BOOT-LOADER-EX-512-v1.0.4-TEST.bin`, `.hex` | 512 KiB RAM disk; USB1 PA11/PA12. Clean H743 build passed. Physical copy/update and application handoff were not tested. |
 
 The downloadable Bootloader tree retains the 768 KiB and 512 KiB variants for both Duo and EX, which are the two available rollback choices. Older 512-era artifacts were removed from the latest tree and remain in Git history. All four new images are TEST builds; no hardware test is claimed. Exact build paths, sizes, and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+## 2026-11-16 — GOHO-NEXT-016 USB2 application routing correction
+
+| Product | Version | Status | BIN | Size / SHA-256 |
+|---|---:|---|---|---|
+| GOHO Eris | v0.1.2 | TEST | `eris/GOHO-ERIS-v0.1.2-TEST.bin` + matching HEX | 549084 bytes; SHA-256 `b2354220063b25dd5254ac78deba72952ee5a71cdf550debd5ca04d530171842` |
+| GOHO Pluto | v0.1.20 | TEST | `pluto/GOHO-PLUTO-v0.1.20-TEST.bin` + matching HEX | 336988 bytes; SHA-256 `c98a35bf4291aa4bf56ad0433bc5c81441a71715df4ba807f467422d1ff1251a` |
+| GOHO Rhea | v0.1.11 | TEST | `rhea/GOHO-RHEA-v0.1.11-TEST.bin` + matching HEX | 211416 bytes; SHA-256 `6c1181f9c2ab791e2cd66a1aa4e136dff633b8735d47234660fe2cbe41f1e450` |
+
+All three clean H743 builds use `GOHO_USB_RUNTIME_HS_ONLY`: CDC, USB Audio and USB MIDI are registered on USB2/PB14-PB15. USB1/OTG_FS is not initialized by the application and remains available for STM32 ROM DFU. USB enumeration, CDC traffic, USB Audio streaming and MIDI behavior on these exact images are not yet tested. Pluto v0.1.18 and Rhea v0.1.9 were removed from the active download tree to retain only the newest two versions; their history remains in Git.
