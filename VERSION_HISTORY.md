@@ -292,3 +292,20 @@ All five builds used GOHO's independent Makefiles, GNU Arm Embedded Toolchain 10
 
 The archive keeps the current and immediately previous image for each updated
 series. The source repository was dirty at HEAD `8b2866035b73b8ed6d38f146fc564be5331a5ed1`; these artifacts include the existing working tree plus NEXT-018 changes and do not represent a committed source snapshot.
+
+
+## 2026-11-16 — GOHO-NEXT-019 fixed Bootloader identity and MIDI device info v2
+
+| Product | Version | Status | BIN | Size | SHA-256 |
+|---|---:|---|---|---:|---|
+| GOHO bootloader | 1.1.0 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.1.0-TEST.bin` | 131072 | `8781a3307a10ee2fcd788eee4d75537431d2068001bfb8696c95bb8ca3e86223` |
+| GOHO bootloader EX | 1.0.7 | TEST | `bootloaders/GOHO-BOOTLOADEREX-v1.0.7-TEST.bin` | 131072 | `53c6beb0be4aeda3d9dc8a30da98d05f8ad0959cc15b30a140c64eeb0d28fd8c` |
+| GOHO 512 bootloader | 1.0.8 | TEST | `bootloaders/GOHO-BOOT-LOADER-512-v1.0.8-TEST.bin` | 131072 | `ba7916d14f77de919ad567aa1387c1121449bdbad6852e7c960a427a69a2cb8b` |
+| GOHO 512 EX bootloader | 1.0.6 | TEST | `bootloaders/GOHO-BOOT-LOADER-EX-512-v1.0.6-TEST.bin` | 131072 | `c1c0a229eca2ffc4b868978a7851d8e162e880326185ec478fc09ae5a2e74086` |
+| GOHO Bennu | 0.3.1 | TEST | `bennu/GOHO-BENNU-v0.3.1-TEST.bin` | 360948 | `35f2a4131a2fa90f53d313f07ba1efd5948a26bcb46e6de5a9abb0f35ee30bf2` |
+| GOHO Bennu EX | 0.3.1 | TEST | `bennu/GOHO-BENNU-EX-v0.3.1-TEST.bin` | 360820 | `0f42455988c8ff6163e71184be0717e6668e304ac18721d9f1baf6d20d9f2f40` |
+| GOHO Pluto | 0.2.1 | TEST | `pluto/GOHO-PLUTO-v0.2.1-TEST.bin` | 342684 | `480ce31c36027bcc64f8933fe6106a5bc6aed1d6ea0d96eea773b4b310a68174` |
+| GOHO Rhea | 0.2.1 | TEST | `rhea/GOHO-RHEA-v0.2.1-TEST.bin` | 219856 | `2d142dfc3d7b34c6d9b5f8aabb3cfbf81a29fb9c19f115c4fc49bcf4a46c30b2` |
+| GOHO Eris | 0.1.5 | TEST | `eris/GOHO-ERIS-v0.1.5-TEST.bin` | 557476 | `3b29a50ba21761b7b38861c6c12313527feaf2c036df13e75c8a68f933be97f6` |
+
+All nine images were built with GNU Arm Embedded Toolchain 10.3.1 from the GOHO project. Each application vector is `0x08020000`; each Bootloader vector is `0x08000000`. The four Bootloader BIN/HEX records were independently parsed and their CRCs and absolute Intel HEX addresses matched. Host CTest passed 53/53. No physical board test was performed. The source worktree was dirty at `8b2866035b73b8ed6d38f146fc564be5331a5ed1`, included prior NEXT-017/018 changes, and remains uncommitted. The active download set retains only the latest two files per series; superseded files remain in Git history. Exact BIN/HEX checksums are in `SHA256SUMS.txt` and manifest build records.

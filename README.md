@@ -6,15 +6,15 @@ Versioned GOHO firmware images and release metadata. This repository contains fi
 
 | Product | Current image | Previous image | Flash address | Status |
 |---|---|---|---:|---|
-| GOHO bootloader (768 KiB Duo) | `GOHO-BOOTLOADER-v1.0.9-TEST` (`.bin`, `.hex`) | `GOHO-BOOTLOADER-v1.0.8-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO bootloaderex (768 KiB EX) | `GOHO-BOOTLOADEREX-v1.0.6-TEST` (`.bin`, `.hex`) | `GOHO-BOOTLOADEREX-v1.0.5-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO bootloader EX512 | `GOHO-BOOT-LOADER-EX-512-v1.0.5-TEST` (`.bin`, `.hex`) | `GOHO-BOOT-LOADER-EX-512-v1.0.4-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO bootloader (512 KiB Duo) | `GOHO-BOOT-LOADER-512-v1.0.7-TEST` (`.bin`, `.hex`) | no previous image retained | `0x08000000` | TEST |
-| GOHO Bennu | `GOHO-BENNU-v0.3.0-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-v0.2.26-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Bennu EX | `GOHO-BENNU-EX-v0.3.0-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-EX-v0.2.22-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Pluto | `GOHO-PLUTO-v0.2.0-TEST` (`.bin`, `.hex`) | `GOHO-PLUTO-v0.1.21-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Rhea | `GOHO-RHEA-v0.2.0-TEST` (`.bin`, `.hex`) | `GOHO-RHEA-v0.1.12-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Eris | `GOHO-ERIS-v0.1.4-TEST` (`.bin`, `.hex`) | `GOHO-ERIS-v0.1.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO bootloader (768 KiB Duo) | `GOHO-BOOTLOADER-v1.1.0-TEST` (`.bin`, `.hex`) | `GOHO-BOOTLOADER-v1.0.9-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
+| GOHO bootloader EX (768 KiB) | `GOHO-BOOTLOADEREX-v1.0.7-TEST` (`.bin`, `.hex`) | `GOHO-BOOTLOADEREX-v1.0.6-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
+| GOHO 512 bootloader | `GOHO-BOOT-LOADER-512-v1.0.8-TEST` (`.bin`, `.hex`) | `GOHO-BOOT-LOADER-512-v1.0.7-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
+| GOHO 512 EX bootloader | `GOHO-BOOT-LOADER-EX-512-v1.0.6-TEST` (`.bin`, `.hex`) | `GOHO-BOOT-LOADER-EX-512-v1.0.5-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
+| GOHO Bennu | `GOHO-BENNU-v0.3.1-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-v0.3.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu EX | `GOHO-BENNU-EX-v0.3.1-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-EX-v0.3.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Pluto | `GOHO-PLUTO-v0.2.1-TEST` (`.bin`, `.hex`) | `GOHO-PLUTO-v0.2.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Rhea | `GOHO-RHEA-v0.2.1-TEST` (`.bin`, `.hex`) | `GOHO-RHEA-v0.2.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Eris | `GOHO-ERIS-v0.1.5-TEST` (`.bin`, `.hex`) | `GOHO-ERIS-v0.1.4-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Plaits Plus | `PLAITS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Rings Plus | `RINGS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Elements Plus | `ELEMENTS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -72,3 +72,10 @@ startup digits. Host tests and H743 clean builds passed; exact-image physical
 USB, audio, MIDI, LED and bootloader update tests were not run. All images remain
 TEST. SHA-256, byte sizes, build targets and source working-tree boundary are in
 `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+
+## GOHO-NEXT-019 fixed identity and MIDI device info
+
+NEXT-019 candidates are the current TEST downloads above. Each Bootloader image includes its 32-byte identity record at `0x0801FFE0` and exposes `README.TXT` with the matching first-line identity. Product apps implement MIDI Device Info Protocol v2, reporting Bootloader then APP identity and version after MIDI becomes ready and again on host query. Host CTest passed 53/53 and all nine H743 clean builds passed. Physical board programming, MIDI host decoding, USB/audio operation and MSC update were not run; these images are not STABLE. The prior binary/HEX releases remain in Git history, while the current download tree keeps two per series.
+
+The immediately previous image listed for each GOHO product is retained as a rollback. Those older images predate NEXT-019: older Bootloaders do not contain the fixed identity record/README line, and older applications do not implement MIDI Device Info Protocol v2. Use the current NEXT-019 image when testing the new identity protocol.
