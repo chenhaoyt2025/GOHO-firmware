@@ -309,3 +309,15 @@ series. The source repository was dirty at HEAD `8b2866035b73b8ed6d38f146fc564be
 | GOHO Eris | 0.1.5 | TEST | `eris/GOHO-ERIS-v0.1.5-TEST.bin` | 557476 | `3b29a50ba21761b7b38861c6c12313527feaf2c036df13e75c8a68f933be97f6` |
 
 All nine images were built with GNU Arm Embedded Toolchain 10.3.1 from the GOHO project. Each application vector is `0x08020000`; each Bootloader vector is `0x08000000`. The four Bootloader BIN/HEX records were independently parsed and their CRCs and absolute Intel HEX addresses matched. Host CTest passed 53/53. No physical board test was performed. The source worktree was dirty at `8b2866035b73b8ed6d38f146fc564be5331a5ed1`, included prior NEXT-017/018 changes, and remains uncommitted. The active download set retains only the latest two files per series; superseded files remain in Git history. Exact BIN/HEX checksums are in `SHA256SUMS.txt` and manifest build records.
+
+## 2026-11-17 — GOHO-NEXT-019 USB runtime routing correction
+
+| Product | Version | Status | Runtime USB route | BIN bytes | SHA-256 |
+|---|---:|---|---|---:|---|
+| GOHO Bennu | v0.3.2 | TEST | USB2 only: CDC + Audio + MIDI; USB1 not initialized | 360644 | `e5aef40fb5c227de24ae99d31cb3090289c0e505c7de244a77c6f7abd87b85e4` |
+| GOHO Bennu EX | v0.3.2 | TEST | USB1 only: CDC + Audio + MIDI; USB2 not initialized | 360036 | `39f40ae6a46a3cb0a9606828ac668ee57d1a30bfe562538c592f031f24c9b1db` |
+| GOHO Pluto | v0.2.2 | TEST | USB2 only: CDC + Audio + MIDI; USB1 not initialized | 342388 | `2356bea575386e967c529c49df2e3187f69d85a8ce0404e559f3d51360c0fb09` |
+| GOHO Rhea | v0.2.2 | TEST | USB2 only: CDC + Audio + MIDI; USB1 not initialized | 219560 | `df2886a9f9cc4bdd51419a27ef4cadd94beea7e61f6fb1ec338437db4ced606c` |
+| GOHO Eris | v0.1.6 | TEST | USB2 only: CDC + Audio + MIDI; USB1 not initialized | 557172 | `78080706c955e9826060225e0a649a3baf3ee393c22a11531ba19000f0950b96` |
+
+All five are clean H743 builds with the established vector address. Host CTest 53/53 passed. Bennu EX keeps its USB1-only port assignment and disabled Freeze/Seed test variant policy. The earlier NEXT-019 split-routed images are not suitable for verifying the current route; their exact bytes are identified in the manifest as superseded. Physical USB, audio, MIDI, and button tests on these exact images remain unrun; all stay TEST.
