@@ -240,3 +240,16 @@ The current download tree now retains only the latest two firmware images for ev
 | GOHO Bennu | v0.2.24 | TEST | `bennu/GOHO-BENNU-v0.2.24-TEST.bin`, `.hex` | Retained as the previous rollback image. |
 
 The current Bennu download tree retains v0.2.24 and v0.2.25; v0.2.23 artifacts were removed from the current tree. Exact sizes and SHA-256 values are listed in `firmware-manifest.json` and `SHA256SUMS.txt`. Source: GOHO local commit `8b2866035b73b8ed6d38f146fc564be5331a5ed1` plus the uncommitted Bennu startup fix in `bennu_app.cc` and its versioned makefile.
+
+
+
+## 2026-11-16 — GOHO bootloader 512/768 named builds
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO bootloader | v1.0.8 | TEST | `bootloaders/GOHO-BOOTLOADER-v1.0.8-TEST.bin`, `.hex` | 768 KiB RAM disk; USB2 PB14/PB15. Clean H743 build passed. Physical copy/update and application handoff were not tested. |
+| GOHO boot loader 512 | v1.0.7 | TEST | `bootloaders/GOHO-BOOT-LOADER-512-v1.0.7-TEST.bin`, `.hex` | 512 KiB RAM disk; USB2 PB14/PB15. Clean H743 build passed. Physical copy/update and application handoff were not tested. |
+| GOHO bootloaderex | v1.0.5 | TEST | `bootloaders/GOHO-BOOTLOADEREX-v1.0.5-TEST.bin`, `.hex` | 768 KiB RAM disk; USB1 PA11/PA12. Clean H743 build passed. Physical copy/update and application handoff were not tested. |
+| GOHO boot loader ex 512 | v1.0.4 | TEST | `bootloaders/GOHO-BOOT-LOADER-EX-512-v1.0.4-TEST.bin`, `.hex` | 512 KiB RAM disk; USB1 PA11/PA12. Clean H743 build passed. Physical copy/update and application handoff were not tested. |
+
+The downloadable Bootloader tree retains the 768 KiB and 512 KiB variants for both Duo and EX, which are the two available rollback choices. Older 512-era artifacts were removed from the latest tree and remain in Git history. All four new images are TEST builds; no hardware test is claimed. Exact build paths, sizes, and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`.
