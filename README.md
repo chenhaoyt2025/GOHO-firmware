@@ -8,7 +8,7 @@ Versioned GOHO firmware images and release metadata. This repository contains fi
 |---|---|---|---:|---|
 | GOHO Bootloader (Duo) | `bootloaders/GOHO-BOOTLOADER-v1.0.6-TEST` (`.bin`, `.hex`) | `bootloaders/GOHO-BOOTLOADER-v1.0.5-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO Bootloader EX | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.3-TEST` (`.bin`, `.hex`) | `bootloaders/GOHO-BOOTLOADER-EX-v1.0.2-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO Bennu | `bennu/GOHO-BENNU-v0.2.24-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-v0.2.23-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu | `bennu/GOHO-BENNU-v0.2.25-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-v0.2.24-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Bennu EX | `bennu/GOHO-BENNU-EX-v0.2.21-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-EX-v0.2.20-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Pluto | `pluto/GOHO-PLUTO-v0.1.19-TEST` (`.bin`, `.hex`) | `pluto/GOHO-PLUTO-v0.1.18-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Rhea | `rhea/GOHO-RHEA-v0.1.10-TEST` (`.bin`, `.hex`) | `rhea/GOHO-RHEA-v0.1.9-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -43,3 +43,8 @@ Bennu v0.2.23, Bennu EX v0.2.20, Pluto v0.1.18 and Rhea v0.1.9 are clean STM32H7
 ## GOHO-NEXT-015 TEST candidates
 
 The current Bennu v0.2.24, Bennu EX v0.2.21, Pluto v0.1.19 and Rhea v0.1.10 images include the shared persistence/calibration software. All four are clean H743 builds at `0x08020000`. Host CTest 48/48 passed; physical Flash programming, power-cycle persistence, calibration accuracy and MSC-update preservation remain untested. They are TEST candidates, not hardware-accepted releases. SHA-256 and byte size are in `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+
+## GOHO Bennu v0.2.25 startup audio fix
+
+Bennu v0.2.25 starts the processor-mode audio callback during normal boot, allowing the jack probe to run. With no input, the existing AUTO behavior switches to internal Synth after ten seconds. The H743 clean build passed; physical board retest is pending. v0.2.24 is retained as the rollback image.

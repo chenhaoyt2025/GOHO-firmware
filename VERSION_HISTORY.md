@@ -231,3 +231,13 @@ All application images link at `0x08020000`; GNU Arm Embedded Toolchain 10.3.1. 
 All images were built independently from the GOHO project with GNU Arm Embedded Toolchain 10.3.1 and link at `0x08020000`. They remain TEST: no physical Flash programming, calibration measurement, power-cycle, cross-module persistence, or MSC-update-preservation test was run. Host CTest passed 48/48; exact file hashes are recorded in the source project NEXT-015 report and this repository's manifest/checksum list.
 
 The current download tree now retains only the latest two firmware images for every product and Bootloader variant. Bootloader v1.0.4 and Bootloader EX v1.0.1 were removed from the current tree; both remain recoverable from Git history. No Bootloader was rebuilt for NEXT-015.
+
+
+## 2026-11-16 — GOHO Bennu startup audio-path fix
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.2.25 | TEST | `bennu/GOHO-BENNU-v0.2.25-TEST.bin`, `.hex` | Fixes normal boot entering Synth state without starting Codec/SAI/DMA. Processor-mode audio now starts so the probe detects physical input; AUTO keeps the existing ten-second no-input delay before Synth. Clean H743 build passed; physical board retest pending. |
+| GOHO Bennu | v0.2.24 | TEST | `bennu/GOHO-BENNU-v0.2.24-TEST.bin`, `.hex` | Retained as the previous rollback image. |
+
+The current Bennu download tree retains v0.2.24 and v0.2.25; v0.2.23 artifacts were removed from the current tree. Exact sizes and SHA-256 values are listed in `firmware-manifest.json` and `SHA256SUMS.txt`. Source: GOHO local commit `8b2866035b73b8ed6d38f146fc564be5331a5ed1` plus the uncommitted Bennu startup fix in `bennu_app.cc` and its versioned makefile.
