@@ -334,3 +334,16 @@ All five are clean H743 builds with the established vector address. Host CTest 5
 | GOHO Eris | v0.1.7 | TEST | `eris/GOHO-ERIS-v0.1.7-TEST.bin`, `.hex` | Same query fix; clean H743 build and Host CTest 53/53. USB2-only runtime route retained. |
 
 All five images were built with GNU Arm Embedded Toolchain 10.3.1 at application address `0x08020000`. No physical-board validation was run. The active archive retains each product's latest two versions; the replaced oldest BIN/HEX pairs were removed from this checkout and remain recoverable from Git history.
+
+
+## 2026-11-17 — GOHO shared WS2812B startup/version display correction
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.3.4 | TEST | `bennu/GOHO-BENNU-v0.3.4-TEST.bin`, `.hex` | Cumulative rainbow startup and MAJOR/MINOR/PATCH count display; clean H743 build. |
+| GOHO Bennu EX | v0.3.4 | TEST | `bennu/GOHO-BENNU-EX-v0.3.4-TEST.bin`, `.hex` | Same shared LED behavior; USB1-only EX route retained; clean H743 build. |
+| GOHO Pluto | v0.2.4 | TEST | `pluto/GOHO-PLUTO-v0.2.4-TEST.bin`, `.hex` | Same shared LED behavior; clean H743 build. |
+| GOHO Rhea | v0.2.4 | TEST | `rhea/GOHO-RHEA-v0.2.4-TEST.bin`, `.hex` | Same shared LED behavior; clean H743 build. |
+| GOHO Eris | v0.1.8 | TEST | `eris/GOHO-ERIS-v0.1.8-TEST.bin`, `.hex` | Same shared LED behavior; clean H743 build. |
+
+All four Bootloader variants were also rebuilt clean. Their BIN and HEX files match the currently archived versions byte for byte, so their existing version records remain current. No physical-board LED validation was run. Only the latest two application versions per product remain in the active download tree; superseded images remain in Git history.

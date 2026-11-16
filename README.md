@@ -10,11 +10,11 @@ Versioned GOHO firmware images and release metadata. This repository contains fi
 | GOHO bootloader EX (768 KiB) | `GOHO-BOOTLOADEREX-v1.0.7-TEST` (`.bin`, `.hex`) | `GOHO-BOOTLOADEREX-v1.0.6-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO 512 bootloader | `GOHO-BOOT-LOADER-512-v1.0.8-TEST` (`.bin`, `.hex`) | `GOHO-BOOT-LOADER-512-v1.0.7-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO 512 EX bootloader | `GOHO-BOOT-LOADER-EX-512-v1.0.6-TEST` (`.bin`, `.hex`) | `GOHO-BOOT-LOADER-EX-512-v1.0.5-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO Bennu | `GOHO-BENNU-v0.3.3-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-v0.3.2-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Bennu EX | `GOHO-BENNU-EX-v0.3.3-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-EX-v0.3.2-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Pluto | `GOHO-PLUTO-v0.2.3-TEST` (`.bin`, `.hex`) | `GOHO-PLUTO-v0.2.2-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Rhea | `GOHO-RHEA-v0.2.3-TEST` (`.bin`, `.hex`) | `GOHO-RHEA-v0.2.2-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Eris | `GOHO-ERIS-v0.1.7-TEST` (`.bin`, `.hex`) | `GOHO-ERIS-v0.1.6-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu | `GOHO-BENNU-v0.3.4-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-v0.3.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu EX | `GOHO-BENNU-EX-v0.3.4-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-EX-v0.3.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Pluto | `GOHO-PLUTO-v0.2.4-TEST` (`.bin`, `.hex`) | `GOHO-PLUTO-v0.2.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Rhea | `GOHO-RHEA-v0.2.4-TEST` (`.bin`, `.hex`) | `GOHO-RHEA-v0.2.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Eris | `GOHO-ERIS-v0.1.8-TEST` (`.bin`, `.hex`) | `GOHO-ERIS-v0.1.7-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Plaits Plus | `PLAITS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Rings Plus | `RINGS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Elements Plus | `ELEMENTS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
@@ -84,3 +84,8 @@ The immediately previous image listed for each GOHO product is retained as a rol
 ## GOHO-NEXT-019 runtime version re-query builds (2026-11-17)
 
 Bennu v0.3.3, Bennu EX v0.3.3, Pluto v0.2.3, Rhea v0.2.3 and Eris v0.1.7 include the runtime USB MIDI version re-query fix. Each Channel 16 CC119=1 request now queues its own ordered Bootloader and APP records, including when a previous response is in progress. Host CTest passed 53/53 and all five clean STM32H743 application builds passed. Images remain TEST; no physical board/host MIDI test was run. Exact hashes and sizes are in `firmware-manifest.json` and `SHA256SUMS.txt`.
+
+
+## GOHO WS2812B startup and version display update (2026-11-17)
+
+Bennu v0.3.4, Bennu EX v0.3.4, Pluto v0.2.4, Rhea v0.2.4 and Eris v0.1.8 contain the shared startup LED correction: LEDs 1–8 accumulate in rainbow order over the existing chase duration; firmware version digits display MAJOR, MINOR, PATCH, with red/green/blue count indications and one all-white pulse for each zero. All five application images are clean H743 builds and remain TEST pending physical board verification. The four GOHO Bootloader variants were also clean-built; each BIN/HEX matched its currently archived version byte for byte, so no duplicate Bootloader release was created.
