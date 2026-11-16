@@ -12,7 +12,7 @@ Versioned GOHO firmware images and release metadata. This repository contains fi
 | GOHO Bennu EX | `bennu/GOHO-BENNU-EX-v0.2.21-TEST` (`.bin`, `.hex`) | `bennu/GOHO-BENNU-EX-v0.2.20-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Pluto | `pluto/GOHO-PLUTO-v0.1.19-TEST` (`.bin`, `.hex`) | `pluto/GOHO-PLUTO-v0.1.18-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Rhea | `rhea/GOHO-RHEA-v0.1.10-TEST` (`.bin`, `.hex`) | `rhea/GOHO-RHEA-v0.1.9-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Elements | `elements/GOHO-ELEMENTS-v0.1.0-TEST` (`.bin`, `.hex`) | — | `0x08020000` | TEST |
+| GOHO Eris | `eris/GOHO-ERIS-v0.1.1-TEST` (`.bin`, `.hex`) | — (v0.1.0 withdrawn) | `0x08020000` | TEST |
 | Plaits Plus | `plaits-plus/PLAITS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `plaits-plus/PLAITS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Rings Plus | `rings-plus/RINGS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `rings-plus/RINGS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | Elements Plus | `elements-plus/ELEMENTS-PLUS-v0.1.1-TEST` (`.bin`, `.hex`) | `elements-plus/ELEMENTS-PLUS-v0.1.0-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |

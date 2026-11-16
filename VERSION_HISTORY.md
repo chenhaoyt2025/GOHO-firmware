@@ -32,14 +32,13 @@ The prebuilt Plus binaries retain their original embedded USB descriptors. No se
 All newly built GOHO images use GNU Arm Embedded Toolchain 10.3.1 and link their application vectors at `0x08020000`. Exact build directories, sizes, and hashes are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`. The fresh images remain `TEST` until the user checks these exact images on hardware.
 
 
-## 2026-11-16 — GOHO Elements first target image
+## 2026-11-16 — GOHO Eris v0.1.1
 
 | Product | Version | Status | Artifacts | Notes |
 |---|---:|---|---|---|
-| GOHO Elements | v0.1.0 | TEST | `elements/GOHO-ELEMENTS-v0.1.0-TEST.bin`, `.hex` | First GOHO Elements firmware from source commit `d225e39b8bc34b7888e40f8e4d51fa0d925cfb5f`. Host CTest 50/50 and clean STM32H743 build passed; no physical-board acceptance has been run. |
+| GOHO Eris | v0.1.1 | TEST | `eris/GOHO-ERIS-v0.1.1-TEST.bin`, `.hex` | Corrected product identity, physical direct-pot mapping, and app-side virtual-disk reset request. Host CTest 50/50 and clean STM32H743 build passed. Hardware acceptance has not been performed. |
 
-The image links at `0x08020000` and uses GNU Arm Embedded Toolchain 10.3.1. It remains TEST until the user tests this exact image on the board. Size and SHA-256 values are recorded in `firmware-manifest.json` and `SHA256SUMS.txt`.
-
+The earlier v0.1.0 test image was withdrawn from active downloads because its product identity and direct-pot mapping were superseded. Its historical commit remains in Git history; use v0.1.1 for Eris testing. BIN/HEX size and SHA-256 are in `firmware-manifest.json` and `SHA256SUMS.txt`.
 
 ## 2026-11-13 — Plus device identity rebuilds
 
