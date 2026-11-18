@@ -10,8 +10,8 @@ Versioned GOHO firmware images and release metadata. This repository contains fi
 | GOHO bootloader EX (768 KiB) | `GOHO-BOOTLOADEREX-v1.0.7-TEST` (`.bin`, `.hex`) | `GOHO-BOOTLOADEREX-v1.0.6-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO 512 bootloader | `GOHO-BOOT-LOADER-512-v1.0.8-TEST` (`.bin`, `.hex`) | `GOHO-BOOT-LOADER-512-v1.0.7-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
 | GOHO 512 EX bootloader | `GOHO-BOOT-LOADER-EX-512-v1.0.6-TEST` (`.bin`, `.hex`) | `GOHO-BOOT-LOADER-EX-512-v1.0.5-TEST` (`.bin`, `.hex`) | `0x08000000` | TEST |
-| GOHO Bennu | `GOHO-BENNU-v0.3.4-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-v0.3.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
-| GOHO Bennu EX | `GOHO-BENNU-EX-v0.3.4-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-EX-v0.3.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu | `GOHO-BENNU-v0.3.5-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-v0.3.4-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
+| GOHO Bennu EX | `GOHO-BENNU-EX-v0.3.5-TEST` (`.bin`, `.hex`) | `GOHO-BENNU-EX-v0.3.4-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Pluto | `GOHO-PLUTO-v0.2.4-TEST` (`.bin`, `.hex`) | `GOHO-PLUTO-v0.2.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Rhea | `GOHO-RHEA-v0.2.4-TEST` (`.bin`, `.hex`) | `GOHO-RHEA-v0.2.3-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |
 | GOHO Eris | `GOHO-ERIS-v0.1.8-TEST` (`.bin`, `.hex`) | `GOHO-ERIS-v0.1.7-TEST` (`.bin`, `.hex`) | `0x08020000` | TEST |

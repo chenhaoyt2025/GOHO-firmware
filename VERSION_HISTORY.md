@@ -347,3 +347,13 @@ All five images were built with GNU Arm Embedded Toolchain 10.3.1 at application
 | GOHO Eris | v0.1.8 | TEST | `eris/GOHO-ERIS-v0.1.8-TEST.bin`, `.hex` | Same shared LED behavior; clean H743 build. |
 
 All four Bootloader variants were also rebuilt clean. Their BIN and HEX files match the currently archived versions byte for byte, so their existing version records remain current. No physical-board LED validation was run. Only the latest two application versions per product remain in the active download tree; superseded images remain in Git history.
+
+
+## 2026-11-19 — GOHO Bennu first-boot startup correction
+
+| Product | Version | Status | Artifacts | Notes |
+|---|---:|---|---|---|
+| GOHO Bennu | v0.3.5 | TEST | `bennu/GOHO-BENNU-v0.3.5-TEST.bin`, `.hex` | Blank/invalid user settings no longer trap startup in the factory breathing-LED test; safe defaults continue through normal processor startup. Clean H743 build. Hardware retest pending. |
+| GOHO Bennu EX | v0.3.5 | TEST | `bennu/GOHO-BENNU-EX-v0.3.5-TEST.bin`, `.hex` | Same first-boot correction; existing USB1-only EX routing retained. Clean H743 build. Hardware retest pending. |
+
+The active Bennu archive retains v0.3.4 and v0.3.5; v0.3.3 files were removed from the current download tree and remain recoverable in Git history. Exact sizes and SHA-256 values are in `firmware-manifest.json` and `SHA256SUMS.txt`.
